@@ -7,6 +7,32 @@ body {
   color: #5a5a5a;
 }
 
+/* SOCIAL MEDIA ICONS
+-------------------------------------------------- */
+.fa {
+  padding: 20px;
+  font-size: 20px;
+  width: 60px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa:hover {
+  opacity: 0.7;
+}
+
+
+.fa-facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.fa-instagram {
+  background: #881251;
+  color: white;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
