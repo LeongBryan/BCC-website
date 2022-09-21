@@ -67,6 +67,15 @@ body {
   letter-spacing: -.05rem;
 }
 
+/* Custom btns
+------------------------- */
+.my-btn{
+  background-color: rgba(0,0,0,0);
+}
+
+.my-btn:hover{
+  size: 105%;
+}
 
 /* RESPONSIVE CSS
 -------------------------------------------------- */

@@ -33,11 +33,11 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
           <li class="nav-item">
-            <a class="nav-link" href="about.html">About Us</a>
+            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item active">
+            <a class="nav-link" href="">About Us</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
@@ -63,6 +63,7 @@
   <!-- Marketing messaging and featurettes
     ================================================== -->
   <!-- Wrap the rest of the page in another container to center all the content. -->
+  <hr class="featurette-divider">
 
   <div class="container marketing" style="margin-top:60px;">
     <h2 class="text-center">Elders and Deacons</h2><br>
@@ -72,29 +73,71 @@
 
     <div class="row text-center">
       <div class="col-lg-3">
-        <button type="button" class="btn btn-light" data-toggle="modal" data-target="#modalRelatedContent">
+        <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#james">
           <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
-          <h3 class="text-muted">James Lee</h3>
+          <h4 class="text-muted">James Lee</h4>
           <p class="text-muted">Elder</p>
         </button>
-
-      </div><!-- /.col-lg-4 -->
+      </div><!-- /.col-lg-3 -->
+      <div class="col-lg-3">
+        <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#songkhim">
+          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <h4 class="text-muted">Chua Song Khim</h4>
+          <p class="text-muted">Elder</p>
+        </button>
+      </div><!-- /.col-lg-3 -->
+      <div class="col-lg-3">
+        <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#fanyung">
+          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <h4 class="text-muted">Ma Fan Yung</h4>
+          <p class="text-muted">Elder</p>
+        </button>
+      </div><!-- /.col-lg-3 -->
+      <div class="col-lg-3">
+        <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#daniel">
+          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <h4 class="text-muted">Daniel Lee</h4>
+          <p class="text-muted">Deacon</p>
+        </button>
+      </div><!-- /.col-lg-3 -->
 
     </div><!-- /.row -->
 
-
+    <!-- <hr class="featurette-divider"> -->
+    <br>
     <h2 class="text-center">Staff</h2><br>
-
+    <div class="row text-center">
+      <div class="col-lg-4">
+        <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#lincoln">
+          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <h4 class="text-muted">Lincoln Mao</h4>
+          <p class="text-muted">Pastor</p>
+        </button>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#grace">
+          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <h4 class="text-muted">Grace Mao</h4>
+          <p class="text-muted">Aunty</p>
+        </button>
+      </div><!-- /.col-lg-4 -->
+      <div class="col-lg-4">
+        <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#joshua">
+          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <h4 class="text-muted">Joshua Tay</h4>
+          <p class="text-muted">Pastoral Intern</p>
+        </button>
+      </div><!-- /.col-lg-4 -->      
+    </div><!-- /.row -->
 
 
     <!-- MODALS -->
     <!--Modal: James-->
-    <div class="modal fade right" id="modalRelatedContent" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal fade right" id="james" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       aria-hidden="true" data-backdrop="false">
       <div class="modal-dialog modal-dialog-centered modal-side modal-bottom-right modal-notify modal-info" role="document">
         <!--Content-->
         <div class="modal-content">
-
           <!--Body-->
           <div class="modal-body">
             <div class="row">
@@ -104,7 +147,7 @@
               </div>
               <div class="col-7">
                 <p><strong>James Lee</strong></p>
-                <p>Some text about James Lee, I suggest we get Jayne Lee to write this up.</p>
+                <p>Some text about this person. We should get BQ kids to describe them!</p>
               </div>
             </div>
           </div>
@@ -115,9 +158,179 @@
         <!--/.Content-->
       </div>
     </div>
-    <!--Modal: modalRelatedContent-->
+    <!--Modal: James-->
+    
+    <!--Modal: Songkhim-->
+    <div class="modal fade right" id="songkhim" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-side modal-bottom-right modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <img src="images/mr_bean.png" class="img-fluid"
+                  alt="">
+              </div>
+              <div class="col-7">
+                <p><strong>Chua Song Khim</strong></p>
+                <p>Some text about this person. We should get BQ kids to describe them!</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Songkhim-->
+
+    <!--Modal: Fanyung-->
+    <div class="modal fade right" id="fanyung" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-side modal-bottom-right modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <img src="images/mr_bean.png" class="img-fluid"
+                  alt="">
+              </div>
+              <div class="col-7">
+                <p><strong>Ma Fan Yung</strong></p>
+                <p>Some text about this person. We should get BQ kids to describe them!</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Fanyung-->
+
+    <!--Modal: Daniel-->
+    <div class="modal fade right" id="daniel" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-side modal-bottom-right modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <img src="images/mr_bean.png" class="img-fluid"
+                  alt="">
+              </div>
+              <div class="col-7">
+                <p><strong>Daniel Lee</strong></p>
+                <p>Some text about this person. We should get BQ kids to describe them!</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Daniel-->
+
+    <!--Modal: Lincoln-->
+    <div class="modal fade right" id="lincoln" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-side modal-bottom-right modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <img src="images/mr_bean.png" class="img-fluid"
+                  alt="">
+              </div>
+              <div class="col-7">
+                <p><strong>Lincoln Mao</strong></p>
+                <p>Some text about this person. We should get BQ kids to describe them!</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Lincoln-->
+
+    <!--Modal: Grace-->
+    <div class="modal fade right" id="grace" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-side modal-bottom-right modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <img src="images/mr_bean.png" class="img-fluid"
+                  alt="">
+              </div>
+              <div class="col-7">
+                <p><strong>Grace Lim</strong></p>
+                <p>Aunty Grace loves going on hikes and particularly enjoys forcing her YAG small group to accompany her on these perilous adventures into the uncharted</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Grace-->
+
+    <!--Modal: Josh-->
+    <div class="modal fade right" id="joshua" tabindex="-1"role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      aria-hidden="true" data-backdrop="false">
+      <div class="modal-dialog modal-dialog-centered modal-side modal-bottom-right modal-notify modal-info" role="document">
+        <!--Content-->
+        <div class="modal-content">
+          <!--Body-->
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-5">
+                <img src="images/mr_bean.png" class="img-fluid"
+                  alt="">
+              </div>
+              <div class="col-7">
+                <p><strong>Joshua Tay</strong></p>
+                <p>Some text about this person. We should get BQ kids to describe them!</p>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+        <!--/.Content-->
+      </div>
+    </div>
+    <!--Modal: Josh-->
 
   </div><!-- /.container -->
+
+  <hr class="featurette-divider">
 
   <!-- FOOTER -->
   <footer class="footer">
