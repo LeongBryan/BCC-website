@@ -77,18 +77,52 @@ body {
   size: 105%;
 }
 
+/* Footer icon list
+------------------------- */
+.icon-list-items {
+    list-style-type: none;
+    font-size: 16px;
+    padding-left:0; 
+}
+
+.icon-list-item:not(:last-child){
+  padding-bottom:12px;
+}
+
+.icon-list-item {
+  /* padding-bottom: 12px; */
+  display: flex;
+  align-items: center;
+}
+
+.icon-list-icon{
+  width: 1.25em;
+  font-size: var(--e-icon-list-icon-size);
+}
+
+.icon-list-text{
+  padding-left: 12px;
+}
 
 /* Social Media
 ------------------------- */
+
+.social-icon{
+  align-items: center;
+  color: #ffffff;
+  font-size: 19px;
+  padding: 8px 10px;
+  border-radius: 5px;
+}
+
 .btn-facebook {
     background: #3b579d;
-    color: #ffffff;
 }
 
 .btn-instagram {
     background: #dc4a38;
-    color: #ffffff;
 }
+
 .btn-facebook:hover, .btn-facebook:focus {
   background: #2d4278;
   color: #ffffff;
