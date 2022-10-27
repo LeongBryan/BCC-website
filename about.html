@@ -12,12 +12,14 @@
 
   <title>Bethesda Christian Centre</title>
 
+  <!-- fontawesome icons -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
-  <link href="dist/css/carousel.css" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/carousel.css">
   <style>
     .modal-header {
       padding: 9px 16px;
@@ -40,19 +42,21 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="">About Us</a>
+          <li class="nav-item ">
+            <a class="nav-link active" href="">About Us <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Get Involved</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="get-involved.html#sunday-services">Sunday Service</a>
-              <a class="dropdown-item" href="get-involved.html#small-gatherings">Small Gatherings</a>
-              <a class="dropdown-item" href="get-involved.html#read">READ/LEARN@W11</a>
+              <a class="dropdown-item" href="sunday-service.html">Sunday Service</a>
+              <a class="dropdown-item" href="small-gatherings.html">Small Gatherings</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="read-learn.html">READ/LEARN@W11</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="our-beliefs.html">Our Beliefs</a>
@@ -65,16 +69,32 @@
     </nav>
   </header>
 
+  <!-- Info Text
+  ================================================== -->
+
   <h2 class="text-center font-weight-normal" style="margin-top:60px;">About Us</h2><br>
+  <div class="row featurette d-flex justify-content-center">
+    <div class="col-md-9">
+      <p class="text-justify px-5">Bethesda Christian Centre (BCC) is a church born of a church-planting vision to be a new witness for Jesus Christ in the north-eastern part of Singapore. Since our inception in 1987, BCC has worshipped at different venues in the North, before settling at Woodlands 11.</p>
+    </div>
+  </div>
+  
+  <br>
+  <!-- <hr class="featurette-divider">
 
-  <p class="text-justify px-3">At Bethesda Christian Centre, we believe that the most important person in the world is <strong>Jesus</strong>. Hence, we are all about knowing Jesus and making Him known.</p>
-
-  <h2 class="text-center font-weight-normal" style="margin-top:60px;">Our Vision</h2><br>
-
-  <p class="text-justify px-3">Our Vision is to be a tree planted by streams of water (Psalm 1:3), always seeking to:</p>
-  <p class="text-justify px-3" style="left:10px"><span class="font-weight-bold">- Grow deep</span><span class="text-muted"> in Christ</span></p>
-  <p class="text-justify px-3" style="left:10px"><span class="font-weight-bold">- Stand firm</span><span class="text-muted"> in the truth of God’s word</span></p>
-  <p class="text-justify px-3" style="left:10px"><span class="font-weight-bold">- Spread wide</span><span class="text-muted"> to grow as a community of believers and to be a witness in the North of Singapore and beyond</span></p>
+  <h2 class="text-center font-weight-normal" style="margin-top:60px;">Our Vision</h2><br> -->
+  <div class="row featurette d-flex justify-content-center">
+    <div class="col-md-9">
+      <p class="text-justify px-5">Our <strong>vision</strong> is to be a tree planted by streams of water <a href="https://www.biblegateway.com/passage/?search=Psalm%201%3A3&version=NIV" target="_blank">(Psalm 1:3)</a>, always seeking to:</p>
+      <ul style="margin-left: 20px;">
+        <li><span class="font-weight-bold">Grow deep</span><span class="text-muted"> in Christ</span></li>
+        <li><span class="font-weight-bold">Stand firm</span><span class="text-muted"> in the truth of God’s word</span></li>
+        <li><span class="font-weight-bold">Spread wide</span><span class="text-muted"> to grow as a community of believers and to be a witness in the North of Singapore and beyond</span></li>
+      </ul>
+    </div>
+  </div>
+  
+<hr class="featurette-divider">
 
   <!-- Marketing messaging and featurettes
     ================================================== -->
@@ -88,28 +108,28 @@
     <div class="row text-center">
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#james">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/james.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">James Lee</h4>
           <p class="text-muted">Elder</p>
         </button>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#songkhim">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/songkhim.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Chua Song Khim</h4>
           <p class="text-muted">Elder</p>
         </button>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#fanyung">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/fanyung.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Ma Fan Yung</h4>
           <p class="text-muted">Elder</p>
         </button>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#daniel">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/daniel.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Daniel Lee</h4>
           <p class="text-muted">Deacon</p>
         </button>
@@ -123,21 +143,21 @@
     <div class="row text-center">
       <div class="col-lg-4">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#lincoln">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/lincoln.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Lincoln Mao</h4>
           <p class="text-muted">Pastor</p>
         </button>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#grace">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/grace.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Grace Mao</h4>
           <p class="text-muted">Pastoral Staff</p>
         </button>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#joshua">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/josh.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Joshua Tay</h4>
           <p class="text-muted">Pastoral Intern</p>
         </button>
@@ -157,7 +177,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/james.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               James Lee</p>
@@ -200,7 +220,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/songkhim.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Chua Song Khim</p>
@@ -245,7 +265,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/fanyung.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">Ma
               Fan Yung</p>
@@ -285,7 +305,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/daniel.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Daniel Lee</p>
@@ -322,7 +342,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/lincoln.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Lincoln Mao</p>
@@ -362,7 +382,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/grace.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Grace Mao</p>
@@ -404,7 +424,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/josh.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Joshua Tay</p>
@@ -436,9 +456,9 @@
 
   </div><!-- /.container -->
 
-  <hr class="featurette-divider">
-
   <!-- FOOTER -->
+  <hr class="featurette-divider" style="margin-bottom: 25px;">
+
   <footer class="footer">
     <div class="container">
       <div class="row">
@@ -446,14 +466,23 @@
           <div class="footer-widget">
             <h3>Visit us!</h3>
             <div class="footer-widget-content">
-              <p>Sunday Services: 9.30am / 11am</p>
-              <p>11 Woodlands Close #03-40</p>
-              <p>Singapore 737853</p>
-              <div class="footer-social">
-                <a class="btn btn-social-icon btn-facebook btn-rounded" href="https://www.facebook.com/BCCWOODLANDS"><i
-                    class="fa fa-facebook"></i></a>
-                <a class="btn btn-social-icon btn-instagram btn-rounded"
-                  href="https://www.instagram.com/bethesdachristiancentre/?hl=en"><i class="fa fa-instagram"></i></a>
+              <ul class="icon-list-items" style="list-style-type:none; padding-left:0;">
+                <li class="icon-list-item">
+                  <span class="icon-list-icon"><i aria-hidden="true" class="fas fa-church"></i></span>
+                  <span class="icon-list-text">Gatherings: 9.30am, 11am</span>
+                </li>
+                <li class="icon-list-item">
+                  <span class="icon-list-icon"><i aria-hidden="true" class="fas fa-phone"></i></span>
+                  <span class="icon-list-text">9742 4245</span>
+                </li>
+                <li class="icon-list-item">
+                  <span class="icon-list-icon"><i aria-hidden="true" class="fas fa-map-marker"></i></span>
+                  <span class="icon-list-text">11 Woodlands Close #03-40<br>Singapore 737853</span>
+                </li>
+              </ul>
+              <div class="footer-social" style="margin-bottom:10px;">
+                <a class="btn-social-icon social-icon btn-facebook" href="https://www.facebook.com/BCCWOODLANDS"><i class="fab fa-facebook"></i></a>
+                <a class="btn-social-icon social-icon btn-instagram" href="https://www.instagram.com/bethesdachristiancentre/?hl=en"><i class="fab fa-instagram"></i></a>
               </div>
             </div>
           </div>
@@ -462,14 +491,10 @@
           <div class="footer-widget">
             <h3>Location</h3>
             <div class="footer-widget-content">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.56752184258!2d103.80056955093607!3d1.4347164989485182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1324bfb4caa5%3A0x8d3e81fba8446753!2sWoodlands%2011!5e0!3m2!1sen!2ssg!4v1663603977537!5m2!1sen!2ssg"
-                width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.566767195476!2d103.80066741514297!3d1.4351492616942618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da139c0cd50fc7%3A0xf0497b2f7966a590!2sBethesda%20Christian%20Centre!5e0!3m2!1sen!2ssg!4v1665197829392!5m2!1sen!2ssg" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
             </div>
           </div>
         </div>
-
       </div>
     </div>
   </footer>

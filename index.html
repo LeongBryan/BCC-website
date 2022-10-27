@@ -11,6 +11,9 @@
 
     <title>Bethesda Christian Centre</title>
 
+    <!-- fontawesome icons -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
@@ -37,13 +40,15 @@
               <a class="nav-link" href="about.html">About Us</a>
             </li>
             <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
+              <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
                 aria-haspopup="true" aria-expanded="false">Get Involved</a>
               <div class="dropdown-menu" aria-labelledby="dropdown01">
-                <a class="dropdown-item" href="get-involved.html#sunday-services">Sunday Service</a>
-                <a class="dropdown-item" href="get-involved.html#small-gatherings">Small Gatherings</a>
-                <a class="dropdown-item" href="get-involved.html#read">READ/LEARN@W11</a>
+                <a class="dropdown-item" href="sunday-service.html">Sunday Service</a>
+                <a class="dropdown-item" href="small-gatherings.html">Small Gatherings</a>
               </div>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="read-learn.html">READ/LEARN@W11</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="our-beliefs.html">Our Beliefs</a>
@@ -68,7 +73,7 @@
         </ol>
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <img class="first-slide" src="images/IMG_3318.JPG" style="width:100%;" alt="First slide">
+            <img class="first-slide" src="images/banners/1.png" alt="First slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Welcome to BCC</h1>
@@ -78,7 +83,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="second-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Second slide">
+            <img class="second-slide" src="images/banners/2.png" alt="Second slide">
             <div class="container">
               <div class="carousel-caption">
                 <h1>Adhoc Announcements?</h1>
@@ -88,7 +93,7 @@
             </div>
           </div>
           <div class="carousel-item">
-            <img class="third-slide" src="data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==" alt="Third slide">
+            <img class="third-slide" src="images/banners/3.png" alt="Third slide">
             <div class="container">
               <div class="carousel-caption text-right">
                 <h1>Grow Deep / Stand Firm / Spread Wide</h1>
@@ -119,14 +124,28 @@
         <hr class="featurette-divider">
 
         <div class="row featurette">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">BCC<span class="text-muted"></span></h2>
+            <p class="lead">At Bethesda Christian Centre, we believe that the most important person in the world is <strong>Jesus</strong>. Hence, we are all about knowing Jesus and making Him known.</p>
+          <a class="btn btn-default pull-right" href="about.html" role="button">Read more &raquo;</a></p>
+          </div>
+          <div class="col-md-5">
+            <img class="featurette-image img-fluid mx-auto" src="images/logo_transparent_bg.png" alt="2022 Sermons">
+          </div>
+        </div>
+
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette">
           <div class="col-md-7">
             <h2 class="featurette-heading">New to Christianity<span class="text-muted"></span></h2>
             <p class="lead">If you would like to find out more about Jesus, we have a 121 Bible Study series for you called
               "Just Looking"</p>
-            <p><a class="btn btn-default pull-right" href="#" role="button">Sign up here &raquo;</a></p>
+            <p><a class="btn btn-default pull-right" href="get-in-touch.html" role="button">Sign up here &raquo;</a></p>
           </div>
-          <div class="col-md-5">
-            <img class="featurette-image img-fluid mx-auto" src="images/just-looking.png" alt="2022 Sermons">
+          <div class="col-md-5  order-md-1">
+            <img class="featurette-image img-fluid mx-auto" src="images/just-looking.png" alt="BCC-logo">
           </div>
         </div>
 
@@ -137,7 +156,7 @@
             <h2 class="featurette-heading">Sermon Series <span class="text-muted"></span></h2>
             <p class="lead">Our weekly sermons are typically expository in nature, etc etc. Sometimes we have topical etc
               etc. All sermons are archived and available for download.</p>
-            <p><a class="btn btn-default pull-right" href="#" role="button">All sermons &raquo;</a></p>
+            <p><a class="btn btn-default pull-right" href="https://tinyurl.com/bccsermons2022" role="button">All sermons &raquo;</a></p>
           </div>
           <div class="col-md-5 order-md-1">
             <img class="featurette-image img-fluid mx-auto" src="images/sermons-2022.jpg"
@@ -152,7 +171,7 @@
             <h2 class="featurette-heading">Small Groups <span class="text-muted"></span></h2>
             <p class="lead">Whether you're an adult, a young adult, <s>rebellious</s> teenager, <s>whining</s> child,
               there's something for you!</p>
-            <p><a class="btn btn-default pull-right" href="#" role="button">Find your community &raquo;</a></p>
+            <p><a class="btn btn-default pull-right" href="small-gatherings.html" role="button">Find your community &raquo;</a></p>
           </div>
           <div class="col-md-5">
             <img class="featurette-image img-fluid mx-auto" src="images/2022-photo.jpeg"
@@ -160,13 +179,13 @@
           </div>
         </div>
 
-        <hr class="featurette-divider">
-
         <!-- /END THE FEATURETTES -->
       </div><!-- /.container -->
     </main>
 
     <!-- FOOTER -->
+    <hr class="featurette-divider" style="margin-bottom: 25px;">
+
     <footer class="footer">
       <div class="container">
         <div class="row">
@@ -174,12 +193,23 @@
             <div class="footer-widget">
               <h3>Visit us!</h3>
               <div class="footer-widget-content">
-                <p>Sunday Services: 9.30am / 11am</p>
-                <p>11 Woodlands Close #03-40</p>
-                <p>Singapore 737853</p>
-                <div class="footer-social">
-                  <a class="btn btn-social-icon btn-facebook btn-rounded" href="https://www.facebook.com/BCCWOODLANDS"><i class="fa fa-facebook"></i></a>
-                  <a class="btn btn-social-icon btn-instagram btn-rounded" href="https://www.instagram.com/bethesdachristiancentre/?hl=en"><i class="fa fa-instagram"></i></a>
+                <ul class="icon-list-items" style="list-style-type:none; padding-left:0;">
+                  <li class="icon-list-item">
+                    <span class="icon-list-icon"><i aria-hidden="true" class="fas fa-church"></i></span>
+                    <span class="icon-list-text">Gatherings: 9.30am, 11am</span>
+                  </li>
+                  <li class="icon-list-item">
+                    <span class="icon-list-icon"><i aria-hidden="true" class="fas fa-phone"></i></span>
+                    <span class="icon-list-text">9742 4245</span>
+                  </li>
+                  <li class="icon-list-item">
+                    <span class="icon-list-icon"><i aria-hidden="true" class="fas fa-map-marker"></i></span>
+                    <span class="icon-list-text">11 Woodlands Close #03-40<br>Singapore 737853</span>
+                  </li>
+                </ul>
+                <div class="footer-social" style="margin-bottom:10px;">
+                  <a class="btn-social-icon social-icon btn-facebook" href="https://www.facebook.com/BCCWOODLANDS"><i class="fab fa-facebook"></i></a>
+                  <a class="btn-social-icon social-icon btn-instagram" href="https://www.instagram.com/bethesdachristiancentre/?hl=en"><i class="fab fa-instagram"></i></a>
                 </div>
               </div>
             </div>
@@ -188,16 +218,13 @@
             <div class="footer-widget">
               <h3>Location</h3>
               <div class="footer-widget-content">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.56752184258!2d103.80056955093607!3d1.4347164989485182!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da1324bfb4caa5%3A0x8d3e81fba8446753!2sWoodlands%2011!5e0!3m2!1sen!2ssg!4v1663603977537!5m2!1sen!2ssg" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.566767195476!2d103.80066741514297!3d1.4351492616942618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da139c0cd50fc7%3A0xf0497b2f7966a590!2sBethesda%20Christian%20Centre!5e0!3m2!1sen!2ssg!4v1665197829392!5m2!1sen!2ssg" width="400" height="200" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
               </div>
             </div>
           </div>
-
         </div>
       </div>
     </footer>
-
-
 
 
     <!-- Bootstrap core JavaScript
@@ -206,6 +233,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
   </body>
 
 </html>
