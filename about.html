@@ -16,11 +16,10 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
 
   <!-- Bootstrap core CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
   <!-- Custom styles for this template -->
-  <link href="dist/css/carousel.css" rel="stylesheet">
+  <link rel="stylesheet" href="dist/css/carousel.css">
   <style>
     .modal-header {
       padding: 9px 16px;
@@ -43,19 +42,21 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <ul class="navbar-nav ml-auto">
           <li class="nav-item">
-            <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-link" href="index.html">Home</a>
           </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="">About Us</a>
+          <li class="nav-item ">
+            <a class="nav-link active" href="">About Us <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="http://example.com" id="dropdown01" data-toggle="dropdown"
+            <a class="nav-link dropdown-toggle" href="#" id="dropdown01" data-toggle="dropdown"
               aria-haspopup="true" aria-expanded="false">Get Involved</a>
             <div class="dropdown-menu" aria-labelledby="dropdown01">
-              <a class="dropdown-item" href="get-involved.html#sunday-services">Sunday Service</a>
-              <a class="dropdown-item" href="get-involved.html#small-gatherings">Small Gatherings</a>
-              <a class="dropdown-item" href="get-involved.html#read">READ/LEARN@W11</a>
+              <a class="dropdown-item" href="sunday-service.html">Sunday Service</a>
+              <a class="dropdown-item" href="small-gatherings.html">Small Gatherings</a>
             </div>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="read-learn.html">READ/LEARN@W11</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="our-beliefs.html">Our Beliefs</a>
@@ -77,8 +78,9 @@
       <p class="text-justify px-5">Bethesda Christian Centre (BCC) is a church born of a church-planting vision to be a new witness for Jesus Christ in the north-eastern part of Singapore. Since our inception in 1987, BCC has worshipped at different venues in the North, before settling at Woodlands 11.</p>
     </div>
   </div>
-<br>
-<!-- <hr class="featurette-divider">
+  
+  <br>
+  <!-- <hr class="featurette-divider">
 
   <h2 class="text-center font-weight-normal" style="margin-top:60px;">Our Vision</h2><br> -->
   <div class="row featurette d-flex justify-content-center">
@@ -106,28 +108,28 @@
     <div class="row text-center">
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#james">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/james.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">James Lee</h4>
           <p class="text-muted">Elder</p>
         </button>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#songkhim">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/songkhim.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Chua Song Khim</h4>
           <p class="text-muted">Elder</p>
         </button>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#fanyung">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/fanyung.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Ma Fan Yung</h4>
           <p class="text-muted">Elder</p>
         </button>
       </div><!-- /.col-lg-3 -->
       <div class="col-lg-3">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#daniel">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/daniel.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Daniel Lee</h4>
           <p class="text-muted">Deacon</p>
         </button>
@@ -141,21 +143,21 @@
     <div class="row text-center">
       <div class="col-lg-4">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#lincoln">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/lincoln.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Lincoln Mao</h4>
           <p class="text-muted">Pastor</p>
         </button>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#grace">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/grace.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Grace Mao</h4>
           <p class="text-muted">Pastoral Staff</p>
         </button>
       </div><!-- /.col-lg-4 -->
       <div class="col-lg-4">
         <button type="button" class="btn btn-light my-btn" data-toggle="modal" data-target="#joshua">
-          <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+          <img class="rounded-circle" src="images/profiles/josh.png" alt="Face" width="140" height="140">
           <h4 class="text-muted">Joshua Tay</h4>
           <p class="text-muted">Pastoral Intern</p>
         </button>
@@ -175,7 +177,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/james.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               James Lee</p>
@@ -218,7 +220,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/songkhim.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Chua Song Khim</p>
@@ -263,7 +265,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/fanyung.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">Ma
               Fan Yung</p>
@@ -303,7 +305,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/daniel.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Daniel Lee</p>
@@ -340,7 +342,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/lincoln.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Lincoln Mao</p>
@@ -380,7 +382,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/grace.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Grace Mao</p>
@@ -422,7 +424,7 @@
           <!--Header-->
           <div class="modal-header ">
             <div class="">
-              <img class="rounded-circle" src="images/mr_bean.png" alt="Face" width="140" height="140">
+              <img class="rounded-circle" src="images/profiles/josh.png" alt="Face" width="140" height="140">
             </div>
             <p class="font-weight-bold col-lg-8 text-center align-self-center" style="margin:1rem; font-size: 200%;">
               Joshua Tay</p>
