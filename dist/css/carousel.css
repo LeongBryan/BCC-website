@@ -6,6 +6,21 @@ body {
   padding-top: 3rem;
   padding-bottom: 3rem;
   color: #5a5a5a;
+  font-family: 'Lato', sans-serif;
+}
+
+h1 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bolder;
+}
+
+h2 {
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
+}
+
+h3 {
+  font-family: 'Lato', sans-serif;
 }
 
 
