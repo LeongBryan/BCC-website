@@ -1,0 +1,110 @@
+<style>
+  /* General typography and spacing */
+  #beliefs {
+    background-color: #f9fafb;
+    font-family: "Merriweather", "Georgia", serif;
+    color: #333;
+  }
+
+  #beliefs h2, #beliefs h3 {
+    font-family: "Merriweather", serif;
+    font-weight: 700;
+    color: #222;
+  }
+
+  #beliefs h5 {
+    font-family: "Merriweather", serif;
+    font-weight: 600;
+    color: #1a3c64;
+    margin-bottom: 0.4rem;
+  }
+
+  #beliefs p {
+    font-family: "Open Sans", Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 0.4rem;
+  }
+
+  #beliefs ol.list-unstyled > li {
+    background: #fff;
+    border-left: 4px solid #dee2e6;
+    border-radius: 6px;
+    padding: 1.25rem 1.5rem;
+    margin-bottom: 1.2rem;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  }
+
+  #beliefs ol.list-unstyled > li:hover {
+    border-left-color: #0d6efd;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  }
+
+  #beliefs .text-muted.small {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #6c757d !important;
+  }
+
+  /* Section headers */
+  #beliefs h2, #beliefs h3 {
+    position: relative;
+  }
+
+  #beliefs h2::after, #beliefs h3::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #0d6efd;
+    margin: 0.6rem auto 1.5rem;
+  }
+
+  /* Horizontal rule between beliefs and practices */
+  #beliefs hr {
+    border-top: 2px solid #dee2e6;
+    width: 70%;
+    margin: 3rem auto;
+  }
+
+    /* Optional: smooth transitions */
+  .details {
+    max-height: 0;
+    opacity: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+  }
+
+  .details.show {
+    max-height: 500px; /* Enough space for most paragraphs */
+    opacity: 1;
+    transition: all 0.4s ease;
+  }
+
+  .btn.active {
+    background-color: #0d6efd;
+    color: white;
+  }
+
+  /* Ultra-compact summary mode */
+  #beliefs.summary-mode ol.list-unstyled > li {
+    border-radius: 6px;
+    padding: 0.2rem 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+
+  .summary-mode #beliefs h5 {
+    margin: 0 !important;          /* remove heading margin */
+    font-size: 0.95rem !important;
+    line-height: 1 !important;     /* minimal line height */
+  }
+
+  .summary-mode #beliefs p,
+  .summary-mode #beliefs .text-muted.small,
+  .summary-mode #beliefs .details {
+    display: none !important;      /* hide all paragraphs, references, and details */
+  }
+
+
+</style>
