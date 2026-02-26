@@ -1,38 +1,65 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import home from "../data/home.json";
+import site from "../data/site.json";
 ---
 
-<BaseLayout title="Bethesda Christian Centre" description="Welcome to Bethesda Christian Centre.">
-  <section class="rounded-2xl border border-black/10 bg-white/90 p-8 shadow-sm md:p-10">
-    <p class="inline-block rounded-full bg-[var(--bcc-green)] px-3 py-1 text-xs font-bold tracking-wide text-slate-800">
-      Milestone 1
-    </p>
-    <h1 class="mt-4 text-3xl font-black tracking-tight text-slate-900 md:text-5xl">
-      Welcome to Bethesda Christian Centre
-    </h1>
-    <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-700 md:text-lg">
-      Astro + TypeScript + Tailwind scaffolding is in place. Full content-faithful migration and redesigned layouts
-      follow in upcoming milestones.
-    </p>
-    <div class="mt-6 flex flex-wrap gap-3">
-      <a
-        href="/sunday-service.html"
-        class="rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-      >
-        Plan your visit
-      </a>
-      <a
-        href="/our-beliefs.html"
-        class="rounded-lg bg-[var(--bcc-blue)] px-4 py-2.5 text-sm font-bold text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-      >
-        What we believe
-      </a>
-      <a
-        href="/get-in-touch.html"
-        class="rounded-lg bg-[var(--bcc-yellow)] px-4 py-2.5 text-sm font-bold text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-      >
-        Get in touch
-      </a>
+<BaseLayout title="Home" description={site.description} image={home.hero.image}>
+  <PageHero
+    eyebrow={home.hero.eyebrow}
+    title={home.hero.title}
+    description={home.hero.description}
+    image={home.hero.image}
+    imageAlt={home.hero.imageAlt}
+    cta={home.hero.cta}
+  />
+
+  <section aria-labelledby="quick-links" class="mt-8 rounded-2xl border border-black/10 bg-white/85 p-6 md:p-8">
+    <h2 id="quick-links" class="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">Plan Your First Visit</h2>
+    <div class="mt-5 grid gap-4 md:grid-cols-3">
+      <article class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <h3 class="text-base font-black text-slate-900">Service Times</h3>
+        <p class="mt-2 text-sm text-slate-700">{site.serviceTimes.join(" and ")}</p>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <h3 class="text-base font-black text-slate-900">Location</h3>
+        <p class="mt-2 text-sm text-slate-700">{site.addressLines[0]}</p>
+      </article>
+      <article class="rounded-xl border border-slate-200 bg-slate-50 p-4">
+        <h3 class="text-base font-black text-slate-900">Contact</h3>
+        <p class="mt-2 text-sm text-slate-700">{site.email}</p>
+      </article>
+    </div>
+  </section>
+
+  <section aria-labelledby="featured-sections" class="mt-10">
+    <h2 id="featured-sections" class="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">Explore</h2>
+    <div class="mt-5 grid gap-6 md:grid-cols-3">
+      {
+        home.sections.map((section) => (
+          <article class="group overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm transition hover:-translate-y-0.5 hover:shadow-md">
+            <img
+              src={section.image}
+              alt={section.imageAlt}
+              width="640"
+              height="420"
+              loading="lazy"
+              class="h-48 w-full object-cover"
+            />
+            <div class="p-5">
+              <h3 class="text-xl font-black tracking-tight text-slate-900">{section.title}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-slate-700">{section.description}</p>
+              <a
+                href={section.href}
+                class="mt-4 inline-block rounded-lg bg-[var(--bcc-yellow)] px-3 py-2 text-sm font-black text-slate-900 transition group-hover:bg-[var(--bcc-green)] focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+              >
+                {section.linkLabel}
+              </a>
+            </div>
+          </article>
+        ))
+      }
     </div>
   </section>
 </BaseLayout>

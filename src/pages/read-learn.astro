@@ -1,13 +1,71 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import PageHero from "../components/PageHero.astro";
+import readLearn from "../data/read-learn.json";
 ---
 
-<BaseLayout title="READ/LEARN@W11 | Bethesda Christian Centre">
-  <section class="rounded-2xl border border-black/10 bg-white/90 p-8 shadow-sm md:p-10">
-    <h1 class="text-3xl font-black tracking-tight text-slate-900 md:text-4xl">READ/LEARN@W11</h1>
-    <p class="mt-4 max-w-3xl text-slate-700">
-      This route is preserved and ready for content migration of READ@W11 and LEARN@W11 details, timings, and signup
-      CTAs.
-    </p>
+<BaseLayout
+  title="READ/LEARN@W11"
+  description="READ@W11 and LEARN@W11 literacy and tuition programs."
+  image="/images/read_logo.png"
+>
+  <PageHero
+    eyebrow="READ/LEARN@W11"
+    title={readLearn.title}
+    description={readLearn.intro}
+    image="/images/read_logo.png"
+    imageAlt="READ@W11 logo"
+    cta={[{ label: readLearn.cta.label, href: readLearn.cta.href }]}
+  />
+
+  <section aria-labelledby="programs" class="mt-10">
+    <h2 id="programs" class="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">Programs</h2>
+    <div class="mt-5 space-y-6">
+      {
+        readLearn.programs.map((program, index) => (
+          <article
+            class:list={[
+              "grid gap-6 rounded-2xl border border-black/10 bg-white/90 p-6 shadow-sm md:grid-cols-[1fr_1fr] md:items-center",
+              index % 2 === 1 ? "md:[&>div:first-child]:order-2 md:[&>figure]:order-1" : "",
+            ]}
+          >
+            <div>
+              <h3 class="text-2xl font-black tracking-tight text-slate-900">{program.name}</h3>
+              <p class="mt-3 text-sm leading-relaxed text-slate-700">{program.description}</p>
+              <p class="mt-4 text-sm text-slate-700">
+                <span class="font-black text-slate-900">Time:</span> {program.time}
+              </p>
+              <p class="mt-1 text-sm text-slate-700">
+                <span class="font-black text-slate-900">Location:</span>
+                <a
+                  href={program.locationLink}
+                  target="_blank"
+                  rel="noreferrer"
+                  class="ml-1 font-semibold underline decoration-slate-400 underline-offset-2 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+                >
+                  {program.location}
+                </a>
+              </p>
+              <a
+                href={readLearn.cta.href}
+                class="mt-5 inline-flex rounded-lg bg-[var(--bcc-yellow)] px-3 py-2 text-sm font-black text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+              >
+                {readLearn.cta.label}
+              </a>
+            </div>
+            <figure class="overflow-hidden rounded-xl border border-slate-200">
+              <img
+                src={program.image}
+                alt={program.imageAlt}
+                width="900"
+                height="650"
+                loading="lazy"
+                class="h-64 w-full object-cover"
+              />
+            </figure>
+          </article>
+        ))
+      }
+    </div>
   </section>
 </BaseLayout>

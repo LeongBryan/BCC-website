@@ -1,0 +1,49 @@
+{
+  "hero": {
+    "eyebrow": "Welcome to BCC",
+    "title": "A Family Church In Woodlands",
+    "description": "Bethesda Christian Centre is a family church that seeks to love and serve the community with the gospel. We are all about knowing Jesus and making Him known.",
+    "image": "/images/banners/1.png",
+    "imageAlt": "Bethesda Christian Centre welcome banner",
+    "cta": [
+      {
+        "label": "Plan your visit",
+        "href": "/sunday-service.html"
+      },
+      {
+        "label": "What we believe",
+        "href": "/our-beliefs.html"
+      },
+      {
+        "label": "Get in touch",
+        "href": "/get-in-touch.html"
+      }
+    ]
+  },
+  "sections": [
+    {
+      "title": "Current Sermon Series",
+      "description": "Join us as we hear God’s word faithfully taught every Sunday and encourage one another in Christ.",
+      "image": "/images/christmas_sermon_series.jpeg",
+      "imageAlt": "Current sermon series visual",
+      "href": "/sunday-service.html",
+      "linkLabel": "See Sunday service details"
+    },
+    {
+      "title": "What Is Christianity?",
+      "description": "If you would like to find out more about Jesus, we have a one-to-one Bible study series called Just Looking.",
+      "image": "/images/just-looking.png",
+      "imageAlt": "Just Looking Bible study visual",
+      "href": "/get-in-touch.html",
+      "linkLabel": "Sign up for Just Looking"
+    },
+    {
+      "title": "Small Gatherings",
+      "description": "Get to know us through our small gatherings as we learn and apply God’s word together.",
+      "image": "/images/church_camp_2023.jpg",
+      "imageAlt": "Church members gathered together",
+      "href": "/small-gatherings.html",
+      "linkLabel": "Find your community"
+    }
+  ]
+}
