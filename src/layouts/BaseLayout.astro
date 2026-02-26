@@ -1,0 +1,136 @@
+---
+import "../styles/global.css";
+
+export interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = "Bethesda Christian Centre",
+  description =
+    "Bethesda Christian Centre is a family church that seeks to love and serve the community with the gospel.",
+} = Astro.props;
+
+const navLinks = [
+  { href: "/index.html", label: "Home" },
+  { href: "/about.html", label: "About Us" },
+  { href: "/sunday-service.html", label: "Sunday Service" },
+  { href: "/small-gatherings.html", label: "Small Gatherings" },
+  { href: "/read-learn.html", label: "READ/LEARN@W11" },
+  { href: "/our-beliefs.html", label: "Our Beliefs" },
+  { href: "/get-in-touch.html", label: "Get in Touch" },
+];
+
+const currentPath = Astro.url.pathname;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+  </head>
+  <body class="font-sans antialiased">
+    <a href="#main-content" class="skip-link">Skip to content</a>
+
+    <header class="sticky top-0 z-30 border-b border-black/10 bg-white/90 backdrop-blur">
+      <div class="mx-auto flex w-full max-w-6xl items-center justify-between gap-4 px-4 py-3 md:px-6">
+        <a href="/index.html" class="inline-flex items-center gap-3">
+          <img
+            src="/images/logo_transparent_bg.png"
+            width="58"
+            height="58"
+            alt="Bethesda Christian Centre logo"
+            class="h-14 w-14 rounded-md object-contain"
+          />
+          <span class="hidden text-sm font-bold tracking-wide text-slate-900 sm:inline">
+            Bethesda Christian Centre
+          </span>
+        </a>
+
+        <nav aria-label="Primary">
+          <ul class="flex flex-wrap items-center justify-end gap-x-3 gap-y-2 text-sm md:gap-x-4">
+            {
+              navLinks.map((link) => (
+                <li>
+                  <a
+                    href={link.href}
+                    class:list={[
+                      "rounded-md px-2.5 py-1.5 font-semibold text-slate-700 transition hover:bg-slate-100 hover:text-slate-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900",
+                      currentPath === link.href || (currentPath === "/" && link.href === "/index.html")
+                        ? "bg-slate-900 text-white hover:bg-slate-900 hover:text-white"
+                        : "",
+                    ]}
+                    aria-current={
+                      currentPath === link.href || (currentPath === "/" && link.href === "/index.html")
+                        ? "page"
+                        : undefined
+                    }
+                  >
+                    {link.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content" class="mx-auto w-full max-w-6xl px-4 py-10 md:px-6 md:py-14">
+      <slot />
+    </main>
+
+    <footer class="border-t border-black/10 bg-white/90">
+      <div class="mx-auto grid w-full max-w-6xl gap-8 px-4 py-8 md:grid-cols-2 md:px-6">
+        <section aria-labelledby="visit-title">
+          <h2 id="visit-title" class="text-lg font-bold text-slate-900">Visit us</h2>
+          <ul class="mt-4 space-y-2 text-sm text-slate-700">
+            <li>Gatherings: 9.30am, 11am</li>
+            <li>
+              Phone:
+              <a
+                href="tel:+6597424245"
+                class="font-semibold text-slate-900 underline decoration-slate-400 underline-offset-2"
+              >
+                +65 9742 4245
+              </a>
+            </li>
+            <li>
+              Email:
+              <a
+                href="mailto:bccsg11@gmail.com"
+                class="font-semibold text-slate-900 underline decoration-slate-400 underline-offset-2"
+              >
+                bccsg11@gmail.com
+              </a>
+            </li>
+            <li>11 Woodlands Close #03-40, Singapore 737853</li>
+          </ul>
+        </section>
+
+        <section aria-labelledby="social-title">
+          <h2 id="social-title" class="text-lg font-bold text-slate-900">Connect</h2>
+          <div class="mt-4 flex flex-wrap items-center gap-3 text-sm">
+            <a
+              href="https://www.facebook.com/BCCWOODLANDS"
+              class="rounded-md bg-[#3b579d] px-3 py-2 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+            >
+              Facebook
+            </a>
+            <a
+              href="https://www.instagram.com/bethesdachristiancentre/?hl=en"
+              class="rounded-md bg-[#dc4a38] px-3 py-2 font-semibold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+            >
+              Instagram
+            </a>
+          </div>
+        </section>
+      </div>
+    </footer>
+  </body>
+</html>

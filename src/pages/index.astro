@@ -1,0 +1,38 @@
+---
+import BaseLayout from "../layouts/BaseLayout.astro";
+---
+
+<BaseLayout title="Bethesda Christian Centre" description="Welcome to Bethesda Christian Centre.">
+  <section class="rounded-2xl border border-black/10 bg-white/90 p-8 shadow-sm md:p-10">
+    <p class="inline-block rounded-full bg-[var(--bcc-green)] px-3 py-1 text-xs font-bold tracking-wide text-slate-800">
+      Milestone 1
+    </p>
+    <h1 class="mt-4 text-3xl font-black tracking-tight text-slate-900 md:text-5xl">
+      Welcome to Bethesda Christian Centre
+    </h1>
+    <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-700 md:text-lg">
+      Astro + TypeScript + Tailwind scaffolding is in place. Full content-faithful migration and redesigned layouts
+      follow in upcoming milestones.
+    </p>
+    <div class="mt-6 flex flex-wrap gap-3">
+      <a
+        href="/sunday-service.html"
+        class="rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-bold text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+      >
+        Plan your visit
+      </a>
+      <a
+        href="/our-beliefs.html"
+        class="rounded-lg bg-[var(--bcc-blue)] px-4 py-2.5 text-sm font-bold text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+      >
+        What we believe
+      </a>
+      <a
+        href="/get-in-touch.html"
+        class="rounded-lg bg-[var(--bcc-yellow)] px-4 py-2.5 text-sm font-bold text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+      >
+        Get in touch
+      </a>
+    </div>
+  </section>
+</BaseLayout>
