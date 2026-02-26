@@ -1,0 +1,121 @@
+---
+import site from "../data/site.json";
+
+const currentPath = Astro.url.pathname;
+---
+
+<header class="sticky top-0 z-40 border-b border-black/10 bg-white/95 backdrop-blur">
+  <div class="mx-auto flex w-full max-w-6xl items-center justify-between px-4 py-3 md:px-6">
+    <a href="/index.html" class="inline-flex items-center gap-3 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900">
+      <img
+        src="/images/logo_transparent_bg.png"
+        width="60"
+        height="60"
+        alt="Bethesda Christian Centre logo"
+        class="h-14 w-14 rounded-md object-contain"
+      />
+      <span class="hidden md:block">
+        <span class="block text-base font-black tracking-wide text-slate-900">{site.name}</span>
+        <span class="block text-xs font-semibold uppercase tracking-[0.12em] text-slate-600">{site.tagline}</span>
+      </span>
+    </a>
+
+    <button
+      type="button"
+      class="inline-flex items-center gap-2 rounded-lg border border-slate-300 px-3 py-2 text-sm font-bold text-slate-800 md:hidden focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+      aria-expanded="false"
+      aria-controls="primary-nav-mobile"
+      data-menu-toggle
+    >
+      <span>Menu</span>
+      <span aria-hidden="true">☰</span>
+    </button>
+
+    <nav aria-label="Primary navigation" class="hidden md:block">
+      <ul class="flex items-center gap-1 text-sm">
+        {
+          site.navLinks.map((link) => (
+            <li>
+              <a
+                href={link.href}
+                class:list={[
+                  "rounded-lg px-3 py-2 font-bold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900",
+                  currentPath === link.href || (currentPath === "/" && link.href === "/index.html")
+                    ? "bg-slate-900 text-white"
+                    : "text-slate-700 hover:bg-slate-100 hover:text-slate-900",
+                ]}
+                aria-current={
+                  currentPath === link.href || (currentPath === "/" && link.href === "/index.html")
+                    ? "page"
+                    : undefined
+                }
+              >
+                {link.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+  </div>
+
+  <nav
+    id="primary-nav-mobile"
+    aria-label="Primary navigation mobile"
+    class="hidden border-t border-black/10 bg-white px-4 py-4 md:hidden"
+    data-menu
+  >
+    <ul class="space-y-2">
+      {
+        site.navLinks.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                "block rounded-lg px-3 py-2 font-bold transition focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900",
+                currentPath === link.href || (currentPath === "/" && link.href === "/index.html")
+                  ? "bg-slate-900 text-white"
+                  : "text-slate-700 hover:bg-slate-100 hover:text-slate-900",
+              ]}
+              aria-current={
+                currentPath === link.href || (currentPath === "/" && link.href === "/index.html")
+                  ? "page"
+                  : undefined
+              }
+            >
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+  </nav>
+</header>
+
+<script is:inline>
+  (() => {
+    const toggle = document.querySelector("[data-menu-toggle]");
+    const menu = document.querySelector("[data-menu]");
+    if (!toggle || !menu) return;
+
+    const close = () => {
+      toggle.setAttribute("aria-expanded", "false");
+      menu.classList.add("hidden");
+    };
+
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", isOpen ? "false" : "true");
+      menu.classList.toggle("hidden", isOpen);
+    });
+
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") close();
+    });
+
+    menu.addEventListener("click", (event) => {
+      const target = event.target;
+      if (target instanceof HTMLAnchorElement) close();
+    });
+  })();
+</script>

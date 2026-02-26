@@ -1,0 +1,67 @@
+---
+import site from "../data/site.json";
+---
+
+<footer class="border-t border-black/10 bg-slate-950 text-slate-100">
+  <div class="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1fr_1.1fr] md:px-6">
+    <section aria-labelledby="visit-title">
+      <h2 id="visit-title" class="text-lg font-black uppercase tracking-wide text-[var(--bcc-green)]">Visit Us</h2>
+      <ul class="mt-4 space-y-2 text-sm leading-relaxed text-slate-200">
+        <li><span class="font-bold">Gatherings:</span> {site.serviceTimes.join(", ")}</li>
+        <li>
+          <span class="font-bold">Phone:</span>
+          <a
+            href={`tel:${site.phone}`}
+            class="underline decoration-slate-500 underline-offset-2 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            {site.phoneDisplay}
+          </a>
+        </li>
+        <li>
+          <span class="font-bold">Email:</span>
+          <a
+            href={`mailto:${site.email}`}
+            class="underline decoration-slate-500 underline-offset-2 hover:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          >
+            {site.email}
+          </a>
+        </li>
+        <li>
+          <span class="font-bold">Address:</span>
+          <span>{site.addressLines[0]}</span><br />
+          <span>{site.addressLines[1]}</span>
+        </li>
+      </ul>
+      <div class="mt-5 flex items-center gap-3 text-sm font-bold">
+        <a
+          href={site.social.facebook}
+          class="rounded-md bg-[#3b579d] px-3 py-2 text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        >
+          Facebook
+        </a>
+        <a
+          href={site.social.instagram}
+          class="rounded-md bg-[#dc4a38] px-3 py-2 text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+        >
+          Instagram
+        </a>
+      </div>
+    </section>
+
+    <section aria-labelledby="map-title">
+      <h2 id="map-title" class="text-lg font-black uppercase tracking-wide text-[var(--bcc-yellow)]">Location</h2>
+      <div class="mt-4 overflow-hidden rounded-xl border border-white/10">
+        <iframe
+          src={site.mapEmbedUrl}
+          title="Map location of Bethesda Christian Centre"
+          width="800"
+          height="280"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          class="h-[260px] w-full border-0"
+          allowfullscreen
+        ></iframe>
+      </div>
+    </section>
+  </div>
+</footer>
