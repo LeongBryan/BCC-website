@@ -1,4 +1,12 @@
 {
+  "announcements": [
+    {
+      "title": "Sunday Service Update - 1 Mar",
+      "dateLabel": "Sunday, March 1, 2026",
+      "message": "Service on 1st Mar 2026 will be a combined service at 10:30am.",
+      "priority": "high"
+    }
+  ],
   "hero": {
     "eyebrow": "Welcome to BCC",
     "title": "A Family Church In Woodlands",
