@@ -15,5 +15,7 @@
     "audioSrc": "/dist/audio/sample_sermon_1peter_elect_exiles.mp3"
   },
   "image": "/images/sunday-service.jpg",
-  "imageAlt": "Sunday service gathering"
+  "imageAlt": "Sunday service gathering",
+  "detailsImage": "/images/sermons-2026.jpeg",
+  "detailsImageAlt": "Current sermon series 2026 visual"
 }
