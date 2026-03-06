@@ -1,0 +1,19 @@
+{
+  "title": "Sunday Service",
+  "intro": [
+    "As Christians, we gather every Sunday to worship God as a church and to encourage each other with God’s word.",
+    "A typical service on Sunday at BCC lasts about one hour and includes singing songs of praise, remembering the death of Jesus in the Lord’s Supper, and hearing God’s word read and explained.",
+    "After the service, we usually hang around for a time of refreshment and conversations around God’s word. If you’re new, we look forward to welcoming you into our community."
+  ],
+  "serviceTimes": "9.30am and 11am",
+  "locationLabel": "11 Woodlands Close #03-39 Singapore 737853",
+  "locationLink": "https://goo.gl/maps/HiuVBRKXcMTsFRQC9",
+  "sermonSample": {
+    "title": "Elect Exiles",
+    "passage": "1 Peter 1:1-2",
+    "passageLink": "https://www.biblegateway.com/passage/?search=1%20Peter%201:1-2&version=ESV",
+    "audioSrc": "/dist/audio/sample_sermon_1peter_elect_exiles.mp3"
+  },
+  "image": "/images/sunday-service.jpg",
+  "imageAlt": "Sunday service gathering"
+}

@@ -1,0 +1,54 @@
+{
+  "name": "Bethesda Christian Centre",
+  "shortName": "BCC",
+  "tagline": "Grow Deep, Stand Firm, Spread Wide",
+  "description": "Bethesda Christian Centre is a family church that seeks to love and serve the community with the gospel.",
+  "email": "bccsg11@gmail.com",
+  "phone": "+6597424245",
+  "phoneDisplay": "+65 9742 4245",
+  "addressLines": [
+    "11 Woodlands Close #03-40",
+    "Singapore 737853"
+  ],
+  "serviceTimes": [
+    "9.30am",
+    "11am"
+  ],
+  "serviceLocation": "11 Woodlands Close #03-39 Singapore 737853",
+  "serviceLocationLink": "https://goo.gl/maps/HiuVBRKXcMTsFRQC9",
+  "mapEmbedUrl": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.566767195476!2d103.80066741514297!3d1.4351492616942618!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da139c0cd50fc7%3A0xf0497b2f7966a590!2sBethesda%20Christian%20Centre!5e0!3m2!1sen!2ssg!4v1665197829392!5m2!1sen!2ssg",
+  "social": {
+    "facebook": "https://www.facebook.com/BCCWOODLANDS",
+    "instagram": "https://www.instagram.com/bethesdachristiancentre/?hl=en"
+  },
+  "navLinks": [
+    {
+      "href": "/",
+      "label": "Home"
+    },
+    {
+      "href": "/about.html",
+      "label": "About"
+    },
+    {
+      "href": "/sunday-service.html",
+      "label": "Sunday Service"
+    },
+    {
+      "href": "/small-gatherings.html",
+      "label": "Small Gatherings"
+    },
+    {
+      "href": "/read-learn.html",
+      "label": "Read & Learn"
+    },
+    {
+      "href": "/our-beliefs.html",
+      "label": "Our Beliefs"
+    },
+    {
+      "href": "/get-in-touch.html",
+      "label": "Get in Touch"
+    }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "title": "Our Care Groups",
+  "intro": [
+    "At BCC, we believe that we grow as Christians as we hear the word clearly and faithfully taught.",
+    "Besides our big gatherings, we have smaller gatherings or care groups where we’re organised into our various age groups so that we can learn and apply God’s word to our particular life situations and context."
+  ],
+  "groups": [
+    {
+      "name": "Adult Care Groups",
+      "summary": "For adults who want to meet and support one another. Timings vary by group.",
+      "details": [
+        "Northern: Every Sunday (except 1st Sunday), 11am to 12.30pm after 1st service, Woodlands 11",
+        "Central: 2nd & 4th Friday, 8.15pm, members’ homes at Serangoon or Upper Thomson",
+        "Sembawang: 2nd & 3rd Sunday, 11am, Woodlands 11; and last Friday at 8pm in members’ homes",
+        "Woodlands: 2nd & 4th Sunday, after 2nd service, Woodlands 11"
+      ],
+      "image": "/images/adultcg.jpg",
+      "imageAlt": "Adult care group",
+      "ctaLabel": "Reach out",
+      "ctaHref": "/get-in-touch.html"
+    },
+    {
+      "name": "Young Adults Group",
+      "summary": "For ages 19 to 35. 4-6pm, Saturday, Woodlands 11.",
+      "image": "/images/yag_retreat_2025.jpg",
+      "imageAlt": "Young adults group gathering",
+      "ctaLabel": "Reach out",
+      "ctaHref": "/get-in-touch.html"
+    },
+    {
+      "name": "Resonate",
+      "summary": "Youth ministry for ages 13 to 19. 1:00-2:30pm, Sunday, Woodlands 11.",
+      "image": "/images/resonate_poster.jpg",
+      "imageAlt": "Resonate youth ministry poster",
+      "ctaLabel": "Reach out",
+      "ctaHref": "/get-in-touch.html"
+    },
+    {
+      "name": "Bible Quest",
+      "summary": "Sunday School for ages 4 to 12. 9:30-10:30am, Sunday, Woodlands 11.",
+      "image": "/images/bible_quest.jpg",
+      "imageAlt": "Bible Quest children ministry",
+      "ctaLabel": "Reach out",
+      "ctaHref": "/get-in-touch.html"
+    }
+  ]
+}

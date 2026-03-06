@@ -1,0 +1,31 @@
+{
+  "name": "bcc-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "https://bethesdachristiancentre.org/",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LeongBryan/BCC-website.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/LeongBryan/BCC-website/issues"
+  },
+  "homepage": "https://github.com/LeongBryan/BCC-website#readme",
+  "devDependencies": {
+    "@astrojs/check": "^0.9.6",
+    "@tailwindcss/vite": "^4.2.1",
+    "astro": "^5.18.0",
+    "tailwindcss": "^4.2.1",
+    "typescript": "^5.9.3"
+  }
+}

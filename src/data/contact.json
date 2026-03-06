@@ -1,0 +1,27 @@
+{
+  "title": "Get in Touch",
+  "intro": [
+    {
+      "text": "Our regular worship location at Woodlands 11 is a 12-minute walk from Admiralty MRT Station, with a variety of public bus options.",
+      "links": [
+        {
+          "label": "Woodlands 11",
+          "href": "https://goo.gl/maps/Na41prjCXHSymPZ87"
+        },
+        {
+          "label": "12-minute walk",
+          "href": "https://goo.gl/maps/whDCeLXd9URi8kpE9"
+        },
+        {
+          "label": "public bus options",
+          "href": "https://www.google.com/maps/dir/70+Woodlands+Ave+7,+Admiralty+MRT+Station+(NS10),+Singapore+738344/11+Woodlands+Close,+Woodlands,+Singapore/@1.4382667,103.799217,17z/data=!3m1!4b1!4m16!4m15!1m5!1m1!1s0x31da135e6afa4d9d:0x7bb4bde8d43385d1!2m2!1d103.8009702!2d1.4405962!1m5!1m1!1s0x31da139934e400a5:0x800ceb15c43b6e05!2m2!1d103.8026988!2d1.4347426!2m1!4e3!3e3?entry=ttu"
+        }
+      ]
+    }
+  ],
+  "contact": {
+    "email": "bccsg11@gmail.com",
+    "phone": "+6597424245",
+    "phoneDisplay": "+65 9742 4245"
+  }
+}

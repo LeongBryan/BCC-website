@@ -1,0 +1,167 @@
+{
+  "intro": [
+    "Bethesda Christian Centre (BCC) is a church born of a church-planting vision to be a new witness for Jesus Christ in the north-eastern part of Singapore. Since our inception in 1987, BCC has worshipped at different venues in the North, before settling at Woodlands 11.",
+    "Our vision is to be a tree planted by streams of water (Psalm 1:3), always seeking to grow deep in Christ, stand firm in the truth of God’s word, and spread wide as a community of believers and witness in the North of Singapore and beyond."
+  ],
+  "vision": [
+    {
+      "title": "Grow Deep",
+      "description": "In Christ"
+    },
+    {
+      "title": "Stand Firm",
+      "description": "In the truth of God’s word"
+    },
+    {
+      "title": "Spread Wide",
+      "description": "To grow as a community of believers and to be a witness in the North of Singapore and beyond"
+    }
+  ],
+  "leaders": [
+    {
+      "id": "james-lee",
+      "name": "James Lee",
+      "role": "Elder",
+      "team": "Elders and Deacons",
+      "image": "/images/profiles/james.png",
+      "bio": [
+        "In his younger days he was a youth leader and a postgraduate research student who gladly joined BCC to church plant in the north-eastern belt of Singapore. With a mixture of joy and overcoming challenges, it has indeed been an exciting journey of church planting all these years.",
+        "He works as the Chief Radiation Physicist at National Cancer Centre Singapore. He also finds it a joy and a privilege to teach and take on research supervision in Medical Physics at NTU, raising a new generation of young Medical Physicists.",
+        "He is married to his wife, Alicia and has a daughter, Jayne. He loves to go for walks, shopping, watches K-dramas with his wife, reading and dearly enjoys his local food."
+      ]
+    },
+    {
+      "id": "song-khim",
+      "name": "Chua Song Khim",
+      "role": "Elder",
+      "team": "Elders and Deacons",
+      "image": "/images/profiles/songkhim.png",
+      "bio": [
+        "Song Khim was part of the pioneering team that responded to the call by Bethesda Church Bukit Arang to plant a church in the north-east of Singapore in 1987. Over the past three decades, he has witnessed God’s faithfulness to BCC as well as the strong commitment of church members to reach out to the community. As a care group leader, he has benefited from the learning, care and fellowship of CG members.",
+        "At work, Song Khim is a member of the senior leadership team at the National University Health System where he is primarily responsible for its Population Health effort including People & Culture. He is passionate about leadership development and mentoring healthcare leaders.",
+        "He is married to Mei May and has two daughters, Jesselyn and Kellie, all of whom are serving actively in BCC. In his pastime, he loves to jog, cycle, go for walks with family and enjoys food, especially local favourites and Japanese cuisine."
+      ]
+    },
+    {
+      "id": "fan-yung",
+      "name": "Ma Fan Yung",
+      "role": "Elder",
+      "team": "Elders and Deacons",
+      "image": "/images/profiles/fanyung.png",
+      "bio": [
+        "Fan Yung is an Adjunct Associate Professor in the Department of Electrical and Computer Engineering, NUS since July 2019. Prior to NUS he worked in the semiconductor industry in analog chip design. He hopes to teach, influence the next generation of engineers and point them to God, the ultimate Engineer who wondrously designed our human biology systems and nature.",
+        "He enjoys movies, swimming and nature."
+      ]
+    },
+    {
+      "id": "khai-mun",
+      "name": "Lee Khai Mun",
+      "role": "Elder",
+      "team": "Elders and Deacons",
+      "image": "/images/profiles/khaimun.png",
+      "bio": [
+        "Lee Khai Mun is one of the pioneering lay-leaders of BCC since its inception in 1987 as a church-planting vision of Bethesda Church Bukit Arang.",
+        "He currently leads the BCC Missions Ministry and is a longtime member of Sembawang CG.",
+        "He works as a Medical Doctor and is married to Siew Bee with two adult daughters and their young families."
+      ]
+    },
+    {
+      "id": "bryan-leong",
+      "name": "Bryan Leong",
+      "role": "Deacon",
+      "team": "Elders and Deacons",
+      "image": "/images/profiles/bryan.png",
+      "bio": [
+        "Bryan was born into and raised by the BCC family. He is married to Rachel and they are privileged to serve together. Though primarily in the music ministry, he cheerfully volunteers in children’s programs as needed.",
+        "He works as a DevOps engineer and enjoys tinkering with new technologies."
+      ]
+    },
+    {
+      "id": "daniel-lee",
+      "name": "Daniel Lee",
+      "role": "Deacon",
+      "team": "Elders and Deacons",
+      "image": "/images/profiles/daniel.png",
+      "bio": [
+        "Daniel is a deacon with BCC, and a pioneer member who responded to the call to be part of BCC's church planting vision.",
+        "Daniel has worked for more than 30 years in the civil service, starting out as an organisational psychologist and serving later in corporate administration and more recently, as a director overseeing a portfolio in service delivery.",
+        "He is married to Charlotte with two grown-up children, Isaac and Hannah. He has a passion for community service and actively contributes his time to 5miles and the Towdah orphanage in Bintan."
+      ],
+      "links": [
+        {
+          "label": "5miles",
+          "href": "https://www.5miles.com.sg/"
+        }
+      ]
+    },
+    {
+      "id": "lincoln-mao",
+      "name": "Lincoln Mao",
+      "role": "Elder / Pastor",
+      "team": "Staff",
+      "image": "/images/profiles/lincoln.png",
+      "bio": [
+        "Lincoln is the Pastor-Elder at Bethesda Christian Centre. He used to teach junior college students history, now he teaches young people something far more important: the good news of Jesus Christ.",
+        "He graduated from NUS with a history degree and from Moore College with a theological degree (BTh). He’s married to his wife, Grace and has one son, Nathan.",
+        "In his free time, he used to enjoy playing football. Now, he enjoys watching others play football."
+      ]
+    },
+    {
+      "id": "grace-mao",
+      "name": "Grace Mao",
+      "role": "Pastoral Staff",
+      "team": "Staff",
+      "image": "/images/profiles/grace.png",
+      "bio": [
+        "Grace is married to Lincoln, who dreamt of being a footballer, and they have a son, Nathan, who’s living out his father’s dream. She’s ambivalent about football because of Man United’s decline and the perpetual trail of rubber beads Nate leaves around the house.",
+        "She used to teach English and Philosophy in a secondary school, but, to her great joy, she now has the privilege of teaching the Bible in a variety of contexts. Since graduating from the Evangelical Theological College of Asia in 2020, she has been part of the staff team at Bethesda Christian Centre, where she oversees the children’s ministry, reads the Bible 121 with younger women, co-leads a young adult small group, and helps Lincoln to train the young adult leaders.",
+        "She’s also passionate about teaching the Bible at Jesus Club, a ministry for adults with intellectual disabilities."
+      ],
+      "links": [
+        {
+          "label": "Evangelical Theological College of Asia",
+          "href": "https://www.etcasia.edu.sg/"
+        },
+        {
+          "label": "Jesus Club",
+          "href": "https://www.jesusclub.sg/"
+        }
+      ]
+    },
+    {
+      "id": "shawna-ng",
+      "name": "Shawna Ng",
+      "role": "Pastoral Staff",
+      "team": "Staff",
+      "image": "/images/profiles/shawna.png",
+      "bio": [
+        "Shawna always wanted to change the world one tree at a time, but in university, she realised that what really needed changing were people's hearts through the gospel.",
+        "After spending some time working as a landscape architect and planner, she now spends most of her time teaching the Bible to other women and supporting the children, youth and young adults ministries at BCC, after graduating from the Evangelical Theological College of Asia in 2024.",
+        "Her great joys include hiking, staring at trees and star-filled night skies, as well as drinking well-brewed coffee. Nothing gives her more joy than combining one of these activities with talking to others about life and Jesus."
+      ],
+      "links": [
+        {
+          "label": "Evangelical Theological College of Asia",
+          "href": "https://www.etcasia.edu.sg/"
+        }
+      ]
+    },
+    {
+      "id": "rachel-ker",
+      "name": "Rachel Ker",
+      "role": "Pastoral Staff",
+      "team": "Staff",
+      "image": "/images/profiles/rachel.png",
+      "bio": [
+        "Rachel is married to Bryan and is privileged to serve the church. She primarily runs the READ and LEARN programs, supports the children’s ministry (Bible Quest), and enjoys reading the Bible with other women in church.",
+        "She enjoys exploring cafes and keeping up with her aerial yoga class."
+      ],
+      "links": [
+        {
+          "label": "READ and LEARN",
+          "href": "/read-learn.html"
+        }
+      ]
+    }
+  ]
+}

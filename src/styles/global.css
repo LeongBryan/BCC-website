@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,400;1,700&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Lato", "Segoe UI", Tahoma, sans-serif;
+}
+
+:root {
+  --bcc-green: #dfebbc;
+  --bcc-yellow: #fae7b6;
+  --bcc-blue: #c5e5f3;
+  --bcc-ink: #000000;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    color: #1f2937;
+    background:
+      radial-gradient(
+        circle at top right,
+        color-mix(in oklab, var(--bcc-blue) 50%, white) 0%,
+        transparent 45%
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in oklab, var(--bcc-green) 35%, white) 0%,
+        white 45%
+      );
+    min-height: 100vh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+}
+
+.skip-link {
+  position: absolute;
+  top: -2.75rem;
+  left: 1rem;
+  z-index: 50;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  background: var(--bcc-ink);
+  color: white;
+  transition: top 0.2s ease;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+.animate-enter {
+  animation: fadeUp 450ms ease-out both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

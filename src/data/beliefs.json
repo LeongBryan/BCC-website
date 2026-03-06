@@ -1,0 +1,106 @@
+{
+  "intro": "At Bethesda Christian Centre, we are all about knowing Jesus and making Him known. These are our statements of faith and practices.",
+  "statementOfFaith": [
+    {
+      "title": "The Divine Inspiration, Authority, and Sufficiency of the Holy Scriptures",
+      "summary": "The Scriptures are inspired by God and are the final authority for faith and life.",
+      "references": "2 Timothy 3:15–17; 1 Peter 1:10–12; 2 Peter 1:20–21; Psalm 19:7–11"
+    },
+    {
+      "title": "The Unity of the Godhead",
+      "summary": "There is one God in three Persons: Father, Son, and Holy Spirit, to whom equal honour is due.",
+      "references": "Deuteronomy 6:4; John 1:1–2; John 5:17,22–23; John 14:25–26; John 16:7,27–28; Philippians 2:6; Hebrews 1:1–3,8"
+    },
+    {
+      "title": "The Incarnation of the Son of God",
+      "summary": "Jesus truly became man, being conceived by the Holy Spirit and born of the virgin Mary.",
+      "references": "John 1:14; Romans 8:3; Galatians 4:4; Matthew 1:20–25; Luke 1:35"
+    },
+    {
+      "title": "The Substitutionary Death of Christ",
+      "summary": "His death was a sacrifice to God and a propitiation for the forgiveness of sins.",
+      "references": "Romans 4:25; 2 Corinthians 5:21; Hebrews 9:24–28; Hebrews 10:12–14"
+    },
+    {
+      "title": "The Resurrection of Christ",
+      "summary": "He was bodily raised from the dead.",
+      "references": "Matthew 28:5–7; 1 Corinthians 15:20"
+    },
+    {
+      "title": "The Ascension and Ongoing Priesthood of Christ",
+      "summary": "He ascended to God’s right hand and now serves as the all-sufficient High Priest of His people.",
+      "references": "Mark 16:19–20; Luke 24:50–51; Acts 1:9; Ephesians 4:8–10; Hebrews 4:14–16; Hebrews 7:25"
+    },
+    {
+      "title": "The Return of Christ",
+      "summary": "He will return to gather His people and establish His Kingdom.",
+      "references": "John 14:3; 1 Thessalonians 4:13–18; Luke 1:32–33; Isaiah 9:6–7; Daniel 2:44–45; Daniel 7:13–14"
+    },
+    {
+      "title": "The Sinfulness and Inability of Man",
+      "summary": "Because of Adam’s fall, all humanity is lost, hostile to God, and powerless to do His will.",
+      "references": "Psalm 53:2–3; Luke 19:10; Romans 3:19; Romans 5:6,12–19; Romans 8:5–7"
+    },
+    {
+      "title": "The Regenerating and Sanctifying Work of the Holy Spirit",
+      "summary": "The Spirit is essential for new birth and ongoing transformation.",
+      "references": "John 3:5–8; John 16:8–11; Titus 3:4–7; 2 Thessalonians 2:13–14; 1 Peter 1:2"
+    },
+    {
+      "title": "Justification by Faith Alone",
+      "summary": "Sinners are justified before God solely by faith in Christ.",
+      "references": "Romans 3:21–26; Romans 4:4–5; Romans 5:1; Galatians 2:16"
+    },
+    {
+      "title": "The New Birth of the Justified",
+      "summary": "Every justified believer is born of God.",
+      "references": "John 1:12–13; James 1:18; 1 Peter 1:23"
+    },
+    {
+      "title": "The Evidence of New Birth",
+      "summary": "True new birth results in a life marked by holiness and good works.",
+      "references": "Ephesians 2:10; Ephesians 4:24; Titus 3:4–8"
+    },
+    {
+      "title": "The Resurrection and Eternal Destiny of All People",
+      "summary": "There will be a bodily resurrection: eternal life for the righteous, and eternal punishment for the unrighteous.",
+      "references": "1 Corinthians 15:51–57; Philippians 3:20–21; Romans 14:9–10; 2 Corinthians 5:10; Daniel 12:2; Acts 17:31; Revelation 20:11–15"
+    },
+    {
+      "title": "The Church",
+      "summary": "The universal Church is a gathering of faithful believers united in Christ, in which God’s word is preached and the sacraments are administered according to Christ’s authority.",
+      "references": "Acts 19:32; Hebrews 12:23; 1 Corinthians 14:26; Ephesians 2:20; Ephesians 4:11–12; 1 Timothy 3:15; 1 Corinthians 11:17–34"
+    }
+  ],
+  "practices": [
+    {
+      "title": "Believer’s Baptism",
+      "summary": "The baptism of believers, normally by immersion, is observed upon personal confession of faith in the Lord Jesus Christ.",
+      "references": "Matthew 28:19–20; Acts 2:41; Acts 8:35–38; Acts 10:44–48; Romans 10:9"
+    },
+    {
+      "title": "The Lord’s Supper",
+      "summary": "The Lord’s death is remembered through the Breaking of Bread, usually on the first day of the week. All baptised believers whose conduct is in line with their confession of faith are welcomed to the Lord’s Table.",
+      "references": "Luke 22:14–19; Acts 2:42,46; Acts 20:7; Romans 14:1–9; Romans 15:7; 1 Corinthians 5:6–8; 1 Corinthians 11:23–26"
+    },
+    {
+      "title": "Priesthood of All Believers",
+      "summary": "Every believer is a priest before God without the need for any human mediator.",
+      "references": "1 Peter 2:5,9"
+    },
+    {
+      "title": "The Appointment of Elders",
+      "summary": "Elders are recognised and appointed from among male members who are gifted by God for spiritual leadership, teaching of the word, and pastoral care.",
+      "references": "Acts 20:28; 1 Timothy 3:1–7; Titus 1:5–9; 1 Peter 5:1–4"
+    },
+    {
+      "title": "The Appointment of Deacons",
+      "summary": "Deacons are appointed to serve the church in practical matters, supporting the ministry of the word and prayer.",
+      "references": "Acts 6:1–6; 1 Timothy 3:8–13"
+    }
+  ],
+  "furtherReading": {
+    "label": "The Gospel Coalition confessional statement",
+    "href": "https://www.thegospelcoalition.org/about/foundation-documents/#confessional-statement"
+  }
+}
