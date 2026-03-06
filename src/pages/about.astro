@@ -173,6 +173,17 @@ const staff = about.leaders.filter((person) => person.team === "Staff");
 </BaseLayout>
 
 <style>
+  dialog.bio-dialog {
+    width: min(92vw, 48rem);
+    max-height: 85vh;
+  }
+
+  dialog.bio-dialog[open] {
+    position: fixed;
+    inset: 0;
+    margin: auto;
+  }
+
   dialog.bio-dialog::backdrop {
     backdrop-filter: blur(2px);
   }

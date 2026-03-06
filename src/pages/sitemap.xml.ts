@@ -4,7 +4,6 @@ export const prerender = true;
 
 const routes = [
   "/",
-  "/index.html",
   "/about.html",
   "/sunday-service.html",
   "/small-gatherings.html",

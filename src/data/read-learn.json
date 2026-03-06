@@ -1,11 +1,11 @@
 {
   "title": "READ@W11 | LEARN@W11",
-  "intro": "READ@W11 and LEARN@W11 are literacy and tuition programs for children in the community. We also organise special events such as workshops and learning trips.",
+  "intro": "READ@W11 and LEARN@W11 are literacy and tuition programs for children in the community. We also organise regular workshops and family day events.",
   "programs": [
     {
       "name": "READ@W11",
       "description": "READ@W11 is a literacy programme that supports children aged 4 to 9 years old who are facing literacy challenges. The programme offers a phonics-based curriculum, building their confidence and skill in reading the alphabet and simple words. Teachers engage students through games, storytelling sessions, songs and craft.",
-      "time": "10am-12pm, Saturdays",
+      "time": "10am-11:30am, Saturdays",
       "location": "11 Woodlands Close #03-39 | Singapore 737853",
       "locationLink": "https://goo.gl/maps/HiuVBRKXcMTsFRQC9",
       "image": "/images/read_logo.png",
@@ -13,8 +13,8 @@
     },
     {
       "name": "LEARN@W11",
-      "description": "LEARN@W11 is a tuition and supervised learning programme for children aged 10 to 12 years old. LEARN@W11 offers academic support to primary school students in mathematics and science.",
-      "time": "10am-12pm, Saturdays",
+      "description": "LEARN@W11 is a tuition and supervised learning programme for children aged 10 to 12 years old. LEARN@W11 offers academic support to primary school students in mathematics and English.",
+      "time": "10am-11:30am, Saturdays",
       "location": "11 Woodlands Close #03-39 | Singapore 737853",
       "locationLink": "https://goo.gl/maps/HiuVBRKXcMTsFRQC9",
       "image": "/images/read_logo.png",
