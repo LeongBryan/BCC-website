@@ -12,35 +12,56 @@ import site from "../data/site.json";
         aria-labelledby="announcements-heading"
         class="mb-8 rounded-3xl border-4 border-slate-900 bg-[var(--bcc-yellow)] p-5 shadow-[0_0_0_6px_rgba(0,0,0,0.08)] md:p-7"
       >
-        <div class="flex flex-wrap items-center justify-between gap-3">
-          <h2
-            id="announcements-heading"
-            class="text-xl font-black uppercase tracking-[0.08em] text-slate-900 md:text-2xl"
-          >
-            Announcements
-          </h2>
-          <span class="rounded-full bg-slate-900 px-3 py-1 text-xs font-black uppercase tracking-wide text-white">
-            Important
-          </span>
-        </div>
-        <div class="mt-4 space-y-3">
-          {
-            home.announcements.map((announcement, index) => (
-              <article
-                class:list={[
-                  "rounded-2xl border border-slate-900/20 p-4",
-                  index === 0 ? "bg-white text-slate-900" : "bg-slate-50 text-slate-800",
-                ]}
+        <details open class="announcement-panel">
+          <summary class="flex cursor-pointer list-none flex-wrap items-center justify-between gap-3 [&::-webkit-details-marker]:hidden">
+            <h2
+              id="announcements-heading"
+              class="text-xl font-black uppercase tracking-[0.08em] text-slate-900 md:text-2xl"
+            >
+              Announcements
+            </h2>
+            <div class="flex items-center gap-2">
+              <span class="rounded-full bg-slate-900 px-3 py-1 text-xs font-black uppercase tracking-wide text-white">
+                Important
+              </span>
+              <span
+                aria-hidden="true"
+                class="announcement-toggle inline-flex h-9 w-9 items-center justify-center rounded-full border-2 border-slate-900 bg-white text-slate-900"
               >
-                <p class="text-xs font-black uppercase tracking-[0.1em] text-slate-600">
-                  {announcement.dateLabel}
-                </p>
-                <h3 class="mt-1 text-lg font-black tracking-tight md:text-xl">{announcement.title}</h3>
-                <p class="mt-2 text-sm leading-relaxed md:text-base">{announcement.message}</p>
-              </article>
-            ))
-          }
-        </div>
+                <svg
+                  class="announcement-toggle-icon h-4 w-4"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                >
+                  <path d="M5 8l5 5 5-5"></path>
+                </svg>
+              </span>
+            </div>
+            <span class="sr-only">Toggle announcements list</span>
+          </summary>
+          <div class="mt-4 space-y-3">
+            {
+              home.announcements.map((announcement, index) => (
+                <article
+                  class:list={[
+                    "rounded-2xl border border-slate-900/20 p-4",
+                    index === 0 ? "bg-white text-slate-900" : "bg-slate-50 text-slate-800",
+                  ]}
+                >
+                  <p class="text-xs font-black uppercase tracking-[0.1em] text-slate-600">
+                    {announcement.dateLabel}
+                  </p>
+                  <h3 class="mt-1 text-lg font-black tracking-tight md:text-xl">{announcement.title}</h3>
+                  <p class="mt-2 text-sm leading-relaxed md:text-base">{announcement.message}</p>
+                </article>
+              ))
+            }
+          </div>
+        </details>
       </section>
     )
   }
@@ -102,3 +123,23 @@ import site from "../data/site.json";
     </div>
   </section>
 </BaseLayout>
+
+<style>
+  .announcement-toggle-icon {
+    transition: transform 0.16s ease;
+  }
+
+  details.announcement-panel:not([open]) .announcement-toggle-icon {
+    transform: rotate(-90deg);
+  }
+
+  details.announcement-panel > summary:hover .announcement-toggle {
+    background: #0f172a;
+    color: #ffffff;
+  }
+
+  details.announcement-panel > summary:active .announcement-toggle {
+    background: #1e293b;
+    color: #ffffff;
+  }
+</style>
