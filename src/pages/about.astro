@@ -3,8 +3,10 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 import PageHero from "../components/PageHero.astro";
 import about from "../data/about.json";
 
-const elders = about.leaders.filter((person) => person.team === "Elders and Deacons");
-const staff = about.leaders.filter((person) => person.team === "Staff");
+const hiddenLeaderIds = new Set(["daniel-lee"]);
+const visibleLeaders = about.leaders.filter((person) => !hiddenLeaderIds.has(person.id));
+const elders = visibleLeaders.filter((person) => person.team === "Elders and Deacons");
+const staff = visibleLeaders.filter((person) => person.team === "Staff");
 ---
 
 <BaseLayout
@@ -52,10 +54,10 @@ const staff = about.leaders.filter((person) => person.team === "Staff");
 
   <section aria-labelledby="leadership" class="mt-10">
     <h2 id="leadership" class="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">Elders and Deacons</h2>
-    <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="leader-grid mt-5">
       {
         elders.map((person) => (
-          <article class="rounded-2xl border border-black/10 bg-white/90 p-5 shadow-sm">
+          <article class="leader-card flex flex-col items-center rounded-2xl border border-black/10 bg-white/90 p-5 text-center shadow-sm sm:items-start sm:text-left">
             <img
               src={person.image}
               alt={`Portrait of ${person.name}`}
@@ -69,7 +71,7 @@ const staff = about.leaders.filter((person) => person.team === "Staff");
             <button
               type="button"
               data-open-bio={`bio-${person.id}`}
-              class="mt-3 inline-flex cursor-pointer rounded-lg border-2 border-slate-900/35 bg-[var(--bcc-blue)] px-3 py-2 text-xs font-black uppercase tracking-wide text-slate-900 transition-colors duration-150 hover:border-slate-900 hover:bg-slate-900 hover:text-white active:bg-slate-700 active:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+              class="mt-3 inline-flex self-center cursor-pointer rounded-lg border-2 border-slate-900/35 bg-[var(--bcc-blue)] px-3 py-2 text-xs font-black uppercase tracking-wide text-slate-900 transition-colors duration-150 hover:border-slate-900 hover:bg-slate-900 hover:text-white active:bg-slate-700 active:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:self-start"
             >
               Read bio
             </button>
@@ -84,7 +86,7 @@ const staff = about.leaders.filter((person) => person.team === "Staff");
     <div class="mt-5 grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
       {
         staff.map((person) => (
-          <article class="rounded-2xl border border-black/10 bg-white/90 p-5 shadow-sm">
+          <article class="flex flex-col items-center rounded-2xl border border-black/10 bg-white/90 p-5 text-center shadow-sm sm:items-start sm:text-left">
             <img
               src={person.image}
               alt={`Portrait of ${person.name}`}
@@ -98,7 +100,7 @@ const staff = about.leaders.filter((person) => person.team === "Staff");
             <button
               type="button"
               data-open-bio={`bio-${person.id}`}
-              class="mt-3 inline-flex cursor-pointer rounded-lg border-2 border-slate-900/45 bg-[var(--bcc-yellow)] px-3 py-2 text-xs font-black uppercase tracking-wide text-slate-900 transition-colors duration-150 hover:border-slate-900 hover:bg-slate-900 hover:text-white active:bg-slate-700 active:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+              class="mt-3 inline-flex self-center cursor-pointer rounded-lg border-2 border-slate-900/45 bg-[var(--bcc-yellow)] px-3 py-2 text-xs font-black uppercase tracking-wide text-slate-900 transition-colors duration-150 hover:border-slate-900 hover:bg-slate-900 hover:text-white active:bg-slate-700 active:text-white focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 sm:self-start"
             >
               Read bio
             </button>
@@ -109,7 +111,7 @@ const staff = about.leaders.filter((person) => person.team === "Staff");
   </section>
 
   {
-    about.leaders.map((person) => (
+    visibleLeaders.map((person) => (
       <dialog
         id={`bio-${person.id}`}
         data-bio-dialog
@@ -173,6 +175,31 @@ const staff = about.leaders.filter((person) => person.team === "Staff");
 </BaseLayout>
 
 <style>
+  .leader-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .leader-card {
+    width: min(100%, 20rem);
+  }
+
+  @media (min-width: 640px) {
+    .leader-card {
+      width: calc(50% - 0.5rem);
+      max-width: calc(50% - 0.5rem);
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .leader-card {
+      width: calc((100% - 2rem) / 3);
+      max-width: calc((100% - 2rem) / 3);
+    }
+  }
+
   dialog.bio-dialog {
     width: min(92vw, 48rem);
     max-height: 85vh;
