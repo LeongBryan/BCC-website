@@ -1,18 +1,6 @@
 {
   "announcements": [
     {
-      "title": "Good Friday Combined Service",
-      "dateLabel": "Friday, April 3, 2026",
-      "message": "There will be one combined Good Friday service at 10:30am.",
-      "priority": "high"
-    },
-    {
-      "title": "Easter Sunday Programme",
-      "dateLabel": "Sunday, April 5, 2026",
-      "message": "Easter Sunday services will run at the regular timings: 9:30am and 11:00am.",
-      "priority": "high"
-    },
-    {
       "title": "Church Camp 2026",
       "dateLabel": "Sunday, June 21, 2026",
       "message": "Church camp is scheduled for June 21, 2026. Service held at church camp location only.",
