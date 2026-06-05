@@ -19,7 +19,13 @@ import beliefs from "../data/beliefs.json";
   </section>
 
   <section id="statement-of-faith" aria-labelledby="statement-title" class="mt-10">
-    <h2 data-reveal id="statement-title" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">Statement of Faith</h2>
+    <div data-reveal class="flex flex-wrap items-center justify-between gap-3">
+      <h2 id="statement-title" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">Statement of Faith</h2>
+      <button type="button" data-toggle-all aria-expanded="false" class="group inline-flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-1 text-sm font-semibold text-slate-600 transition hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900">
+        <span data-toggle-label>Expand all</span>
+        <svg class="h-4 w-4 text-slate-400 transition-colors group-hover:text-slate-700" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8l3-3 3 3M7 12l3 3 3-3" /></svg>
+      </button>
+    </div>
     <ol data-stagger class="mt-5 space-y-3">
       {
         beliefs.statementOfFaith.map((item, index) => (
@@ -44,7 +50,13 @@ import beliefs from "../data/beliefs.json";
   </section>
 
   <section id="practices" aria-labelledby="practices-title" class="mt-12">
-    <h2 data-reveal id="practices-title" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">Practices</h2>
+    <div data-reveal class="flex flex-wrap items-center justify-between gap-3">
+      <h2 id="practices-title" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">Practices</h2>
+      <button type="button" data-toggle-all aria-expanded="false" class="group inline-flex cursor-pointer items-center gap-1.5 rounded-lg px-2 py-1 text-sm font-semibold text-slate-600 transition hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900">
+        <span data-toggle-label>Expand all</span>
+        <svg class="h-4 w-4 text-slate-400 transition-colors group-hover:text-slate-700" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7 8l3-3 3 3M7 12l3 3 3-3" /></svg>
+      </button>
+    </div>
     <ol data-stagger class="mt-5 space-y-3">
       {
         beliefs.practices.map((item, index) => (
@@ -106,3 +118,32 @@ import beliefs from "../data/beliefs.json";
     background-color: rgba(15, 23, 42, 0.035);
   }
 </style>
+
+<script is:inline>
+  (() => {
+    document.querySelectorAll("[data-toggle-all]").forEach((btn) => {
+      const section = btn.closest("section");
+      if (!section) return;
+      const items = Array.from(section.querySelectorAll("details.belief"));
+      const label = btn.querySelector("[data-toggle-label]");
+      if (!items.length) return;
+
+      const sync = () => {
+        const allOpen = items.every((d) => d.open);
+        btn.setAttribute("aria-expanded", allOpen ? "true" : "false");
+        if (label) label.textContent = allOpen ? "Collapse all" : "Expand all";
+      };
+
+      btn.addEventListener("click", () => {
+        const expand = !items.every((d) => d.open);
+        items.forEach((d) => {
+          d.open = expand;
+        });
+        sync();
+      });
+
+      items.forEach((d) => d.addEventListener("toggle", sync));
+      sync();
+    });
+  })();
+</script>
