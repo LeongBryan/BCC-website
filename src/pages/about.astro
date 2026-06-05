@@ -147,7 +147,7 @@ const staff = visibleLeaders.filter((person) => person.team === "Staff");
               Close
             </button>
           </div>
-          <div class="space-y-3 text-sm leading-relaxed text-slate-700">
+          <div class="space-y-3 text-justify text-sm leading-relaxed text-slate-700 hyphens-auto">
             {
               person.bio.map((paragraph) => (
                 <p>{paragraph}</p>
@@ -207,7 +207,7 @@ const staff = visibleLeaders.filter((person) => person.team === "Staff");
   }
 
   dialog.bio-dialog {
-    width: min(92vw, 48rem);
+    width: min(92vw, 42rem);
     max-height: 85vh;
   }
 
