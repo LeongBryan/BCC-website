@@ -24,11 +24,8 @@ const { eyebrow, title, description, image, imageAlt = "", cta = [] } = Astro.pr
     {
       cta.length > 0 && (
         <div class="mt-6 flex flex-wrap gap-3">
-          {cta.map((item, index) => (
-            <a
-              href={item.href}
-              class:list={["btn", index === 0 ? "btn-primary" : "btn-secondary"]}
-            >
+          {cta.map((item) => (
+            <a href={item.href} class="btn btn-secondary">
               {item.label}
             </a>
           ))}
