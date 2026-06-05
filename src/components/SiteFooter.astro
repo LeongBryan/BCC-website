@@ -2,10 +2,10 @@
 import site from "../data/site.json";
 ---
 
-<footer class="border-t border-black/10 bg-slate-950 text-slate-100">
+<footer class="border-t border-slate-200/70 bg-slate-950 text-slate-100">
   <div class="mx-auto grid w-full max-w-6xl gap-8 px-4 py-10 md:grid-cols-[1fr_1.1fr] md:px-6">
     <section aria-labelledby="visit-title">
-      <h2 id="visit-title" class="text-lg font-black uppercase tracking-wide text-[var(--bcc-green)]">Visit Us</h2>
+      <h2 id="visit-title" class="text-lg font-bold uppercase tracking-wide text-[var(--bcc-green)]">Visit Us</h2>
       <ul class="mt-4 space-y-2 text-sm leading-relaxed text-slate-200">
         <li><span class="font-bold">Gatherings:</span> {site.serviceTimes.join(", ")}</li>
         <li>
@@ -32,7 +32,7 @@ import site from "../data/site.json";
           <span>{site.addressLines[1]}</span>
         </li>
       </ul>
-      <div class="mt-5 flex items-center gap-3 text-sm font-bold">
+      <div class="mt-5 flex items-center gap-3 text-sm font-semibold">
         <a
           href={site.social.facebook}
           class="rounded-md bg-[#3b579d] px-3 py-2 text-white hover:brightness-110 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
@@ -49,7 +49,7 @@ import site from "../data/site.json";
     </section>
 
     <section aria-labelledby="map-title">
-      <h2 id="map-title" class="text-lg font-black uppercase tracking-wide text-[var(--bcc-yellow)]">Location</h2>
+      <h2 id="map-title" class="text-lg font-bold uppercase tracking-wide text-[var(--bcc-yellow)]">Location</h2>
       <div class="mt-4 overflow-hidden rounded-xl border border-white/10">
         <iframe
           src={site.mapEmbedUrl}

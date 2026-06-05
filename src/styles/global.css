@@ -9,28 +9,54 @@
   --bcc-green: #dfebbc;
   --bcc-yellow: #fae7b6;
   --bcc-blue: #c5e5f3;
-  --bcc-ink: #000000;
+  --bcc-ink: #0f172a;
 }
 
 @layer base {
   html {
     scroll-behavior: smooth;
+    background-color: #fbfcfd;
   }
 
   body {
     color: #1f2937;
-    background:
-      radial-gradient(
-        circle at top right,
-        color-mix(in oklab, var(--bcc-blue) 50%, white) 0%,
-        transparent 45%
-      ),
-      linear-gradient(
-        to bottom,
-        color-mix(in oklab, var(--bcc-green) 35%, white) 0%,
-        white 45%
-      );
     min-height: 100vh;
+  }
+
+  /* Persistent tri-colour wash echoing the logo: yellow + green foliage in the
+     top-left corner, blue blob in the bottom-right. Pinned to the viewport so
+     the colour stays present as you scroll. */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-image:
+      radial-gradient(
+        48rem 38rem at -6% -6%,
+        color-mix(in oklab, var(--bcc-yellow) 88%, white) 0%,
+        transparent 60%
+      ),
+      radial-gradient(
+        50rem 38rem at 20% -12%,
+        color-mix(in oklab, var(--bcc-green) 85%, white) 0%,
+        transparent 58%
+      ),
+      radial-gradient(
+        58rem 46rem at 106% 106%,
+        color-mix(in oklab, var(--bcc-blue) 88%, white) 0%,
+        transparent 62%
+      );
+    background-repeat: no-repeat;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    color: #0f172a;
+    letter-spacing: -0.01em;
   }
 
   h1,
@@ -41,6 +67,80 @@
 
   p {
     text-wrap: pretty;
+  }
+}
+
+@layer components {
+  /* Section eyebrow / category pill */
+  .eyebrow {
+    @apply inline-flex items-center rounded-full bg-[var(--bcc-green)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-800;
+  }
+
+  /* Card / surface */
+  .card {
+    @apply rounded-2xl border border-slate-200/70 bg-white/90 shadow-sm;
+  }
+
+  /* Buttons read as raised, tactile controls: shadow + a small lift on hover,
+     settling back on press. Deliberately distinct from the flat info cards. */
+  .btn {
+    @apply inline-flex cursor-pointer items-center justify-center gap-2 rounded-xl px-4 py-2.5 text-sm font-semibold shadow-sm transition duration-150 hover:-translate-y-0.5 active:translate-y-0 active:shadow-sm focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900;
+  }
+
+  .btn-primary {
+    @apply border border-slate-900 bg-slate-900 text-white hover:bg-slate-800 hover:shadow-md;
+  }
+
+  .btn-secondary {
+    @apply border border-slate-300 bg-white text-slate-800 hover:border-slate-400 hover:bg-slate-50 hover:shadow-md;
+  }
+
+  .btn-sm {
+    @apply px-3 py-2;
+  }
+
+  /* Info / stat cards: flat, tinted, NOT interactive — no shadow, no lift,
+     default cursor. Contrasts with the raised buttons above. */
+  .info-card {
+    @apply flex items-start gap-3 rounded-xl border p-4;
+  }
+
+  .info-icon {
+    @apply mt-0.5 inline-flex h-9 w-9 shrink-0 items-center justify-center rounded-lg bg-white/70 text-slate-700;
+  }
+
+  .info-label {
+    @apply text-xs font-semibold uppercase tracking-wide text-slate-600;
+  }
+
+  .info-value {
+    @apply mt-1 text-base font-semibold text-slate-900;
+  }
+
+  /* Brand colour tints (logo palette) for info cards and accent surfaces */
+  .tint-green {
+    background-color: color-mix(in oklab, var(--bcc-green) 42%, white);
+    border-color: color-mix(in oklab, var(--bcc-green) 62%, white);
+  }
+
+  .tint-blue {
+    background-color: color-mix(in oklab, var(--bcc-blue) 42%, white);
+    border-color: color-mix(in oklab, var(--bcc-blue) 62%, white);
+  }
+
+  .tint-yellow {
+    background-color: color-mix(in oklab, var(--bcc-yellow) 46%, white);
+    border-color: color-mix(in oklab, var(--bcc-yellow) 64%, white);
+  }
+
+  /* Reusable focus ring for inline text links */
+  .focus-ring {
+    @apply focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900;
+  }
+
+  /* Inline text links inside body copy */
+  .link {
+    @apply font-semibold text-slate-900 underline decoration-slate-300 underline-offset-2 transition-colors hover:decoration-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900;
   }
 }
 
@@ -73,5 +173,42 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Reveal-on-scroll. Only active once JS adds `.reveal-ready` to <html> (so
+   content is never hidden without JS) and only when motion is allowed. The
+   head script sets `.reveal-ready` before first paint, so there is no flash. */
+@media (prefers-reduced-motion: no-preference) {
+  .reveal-ready [data-reveal],
+  .reveal-ready [data-stagger] > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition:
+      opacity 0.6s ease-out,
+      transform 0.6s ease-out;
+    will-change: opacity, transform;
+  }
+
+  .reveal-ready [data-reveal].is-visible,
+  .reveal-ready [data-stagger] > *.is-visible {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-enter {
+    animation: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
   }
 }

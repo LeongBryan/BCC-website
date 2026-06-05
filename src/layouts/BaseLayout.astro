@@ -35,6 +35,44 @@ const ogImage = new URL(image, canonical);
     <meta name="twitter:image" content={ogImage.toString()} />
     <link rel="canonical" href={canonical.toString()} />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <script is:inline>
+      // Reveal-on-scroll: gate the hidden state on JS + motion preference, then
+      // fade each section in as it enters the viewport. Setting the class here
+      // (in <head>, before <body> paints) avoids any content flash.
+      (function () {
+        try {
+          if (!("IntersectionObserver" in window)) return;
+          if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+          document.documentElement.classList.add("reveal-ready");
+          document.addEventListener("DOMContentLoaded", function () {
+            var io = new IntersectionObserver(
+              function (entries) {
+                entries.forEach(function (entry) {
+                  if (!entry.isIntersecting) return;
+                  var el = entry.target;
+                  if (el.hasAttribute("data-stagger")) {
+                    // Cascade the container's children in one by one.
+                    Array.prototype.forEach.call(el.children, function (child, i) {
+                      child.style.transitionDelay = i * 70 + "ms";
+                      child.classList.add("is-visible");
+                    });
+                  } else {
+                    el.classList.add("is-visible");
+                  }
+                  io.unobserve(el);
+                });
+              },
+              { rootMargin: "0px 0px -8% 0px", threshold: 0.05 }
+            );
+            document
+              .querySelectorAll("[data-reveal], [data-stagger]")
+              .forEach(function (el) {
+                io.observe(el);
+              });
+          });
+        } catch (e) {}
+      })();
+    </script>
   </head>
   <body class="font-sans antialiased">
     <a href="#main-content" class="skip-link">Skip to content</a>

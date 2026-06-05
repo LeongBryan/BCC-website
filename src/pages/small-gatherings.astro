@@ -18,9 +18,9 @@ import gatherings from "../data/small-gatherings.json";
     cta={[{ label: "Contact us", href: "/get-in-touch.html" }]}
   />
 
-  <section aria-labelledby="care-group-intro" class="mt-8 rounded-2xl border border-black/10 bg-white/90 p-6 md:p-8">
-    <h2 id="care-group-intro" class="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">Why We Gather In Smaller Groups</h2>
-    <div class="mt-4 space-y-3 text-base leading-relaxed text-slate-700">
+  <section aria-labelledby="care-group-intro" class="mt-8 rounded-2xl border border-slate-200/70 bg-white/90 p-6 md:p-8">
+    <h2 data-reveal id="care-group-intro" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">Why We Gather In Smaller Groups</h2>
+    <div data-reveal class="mt-4 space-y-3 text-base leading-relaxed text-slate-700">
       {
         gatherings.intro.map((paragraph) => (
           <p>{paragraph}</p>
@@ -30,11 +30,11 @@ import gatherings from "../data/small-gatherings.json";
   </section>
 
   <section aria-labelledby="group-list" class="mt-10">
-    <h2 id="group-list" class="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">Our Ministries</h2>
-    <div class="mt-5 grid gap-6 md:grid-cols-2">
+    <h2 data-reveal id="group-list" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">Our Ministries</h2>
+    <div data-stagger class="mt-5 grid gap-6 md:grid-cols-2">
       {
         gatherings.groups.map((group) => (
-          <article class="overflow-hidden rounded-2xl border border-black/10 bg-white/90 shadow-sm">
+          <article class="overflow-hidden rounded-2xl border border-slate-200/70 bg-white/90 shadow-sm">
             <img
               src={group.image}
               alt={group.imageAlt}
@@ -44,7 +44,7 @@ import gatherings from "../data/small-gatherings.json";
               class="h-52 w-full object-cover"
             />
             <div class="p-5">
-              <h3 class="text-xl font-black tracking-tight text-slate-900">{group.name}</h3>
+              <h3 class="text-xl font-bold tracking-tight text-slate-900">{group.name}</h3>
               <p class="mt-3 text-sm leading-relaxed text-slate-700">{group.summary}</p>
               {
                 group.details && (
@@ -53,10 +53,7 @@ import gatherings from "../data/small-gatherings.json";
                   </ul>
                 )
               }
-              <a
-                href={group.ctaHref}
-                class="mt-5 inline-flex rounded-lg bg-[var(--bcc-blue)] px-3 py-2 text-sm font-black text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-              >
+              <a href={group.ctaHref} class="btn btn-secondary btn-sm mt-5">
                 {group.ctaLabel}
               </a>
             </div>

@@ -24,13 +24,13 @@ const introItem = contact.intro[0];
     ]}
   />
 
-  <section aria-labelledby="reach-us" class="mt-8 rounded-2xl border border-black/10 bg-white/90 p-6 md:p-8">
-    <h2 id="reach-us" class="text-2xl font-black tracking-tight text-slate-900 md:text-3xl">How To Reach Us</h2>
+  <section data-reveal aria-labelledby="reach-us" class="mt-8 rounded-2xl border border-slate-200/70 bg-white/90 p-6 md:p-8">
+    <h2 id="reach-us" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">How To Reach Us</h2>
     <p class="mt-4 text-base leading-relaxed text-slate-700">
       Our regular worship location at
       <a
         href={introItem.links[0].href}
-        class="font-semibold underline decoration-slate-400 underline-offset-2 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+        class="link"
         target="_blank"
         rel="noreferrer"
       >
@@ -39,7 +39,7 @@ const introItem = contact.intro[0];
       is a
       <a
         href={introItem.links[1].href}
-        class="font-semibold underline decoration-slate-400 underline-offset-2 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+        class="link"
         target="_blank"
         rel="noreferrer"
       >
@@ -49,7 +49,7 @@ const introItem = contact.intro[0];
       from Admiralty MRT Station, with a variety of
       <a
         href={introItem.links[2].href}
-        class="font-semibold underline decoration-slate-400 underline-offset-2 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+        class="link"
         target="_blank"
         rel="noreferrer"
       >
@@ -61,7 +61,7 @@ const introItem = contact.intro[0];
       Contact us at
       <a
         href={`mailto:${contact.contact.email}`}
-        class="font-semibold underline decoration-slate-400 underline-offset-2 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+        class="link"
       >
         {" "}
         {contact.contact.email}
@@ -69,7 +69,7 @@ const introItem = contact.intro[0];
       or
       <a
         href={`tel:${contact.contact.phone}`}
-        class="font-semibold underline decoration-slate-400 underline-offset-2 hover:text-slate-900 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
+        class="link"
       >
         {" "}
         {contact.contact.phoneDisplay}
@@ -77,9 +77,9 @@ const introItem = contact.intro[0];
     </p>
   </section>
 
-  <section aria-labelledby="contact-form" class="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
-    <div class="rounded-2xl border border-black/10 bg-white/90 p-6">
-      <h2 id="contact-form" class="text-2xl font-black tracking-tight text-slate-900">Quick Contact Form</h2>
+  <section data-stagger aria-labelledby="contact-form" class="mt-8 grid gap-6 lg:grid-cols-[1fr_1fr]">
+    <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-6">
+      <h2 id="contact-form" class="text-2xl font-extrabold tracking-tight text-slate-900">Quick Contact Form</h2>
       <p class="mt-3 text-sm text-slate-700">
         This static form opens your email client. You may also email us directly if you prefer.
       </p>
@@ -89,7 +89,7 @@ const introItem = contact.intro[0];
         enctype="text/plain"
         class="mt-5 space-y-4"
       >
-        <label class="block text-sm font-bold text-slate-800" for="name">
+        <label class="block text-sm font-semibold text-slate-800" for="name">
           Name
         </label>
         <input
@@ -97,10 +97,10 @@ const introItem = contact.intro[0];
           name="name"
           type="text"
           required
-          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-slate-700 focus:outline-none"
+          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm transition focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
         />
 
-        <label class="block text-sm font-bold text-slate-800" for="email">
+        <label class="block text-sm font-semibold text-slate-800" for="email">
           Email
         </label>
         <input
@@ -108,16 +108,16 @@ const introItem = contact.intro[0];
           name="email"
           type="email"
           required
-          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-slate-700 focus:outline-none"
+          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm transition focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
         />
 
-        <label class="block text-sm font-bold text-slate-800" for="interest">
+        <label class="block text-sm font-semibold text-slate-800" for="interest">
           I am interested in
         </label>
         <select
           id="interest"
           name="interest"
-          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-slate-700 focus:outline-none"
+          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm transition focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
         >
           <option>Sunday Service</option>
           <option>Small Gatherings</option>
@@ -125,27 +125,22 @@ const introItem = contact.intro[0];
           <option>Just Looking Bible Study</option>
         </select>
 
-        <label class="block text-sm font-bold text-slate-800" for="message">
+        <label class="block text-sm font-semibold text-slate-800" for="message">
           Message
         </label>
         <textarea
           id="message"
           name="message"
           rows="4"
-          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm focus:border-slate-700 focus:outline-none"
+          class="w-full rounded-lg border border-slate-300 bg-white px-3 py-2 text-sm transition focus:border-slate-400 focus:outline-none focus:ring-2 focus:ring-slate-900/15"
         ></textarea>
 
-        <button
-          type="submit"
-          class="rounded-lg bg-slate-900 px-4 py-2.5 text-sm font-black text-white hover:bg-slate-800 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900"
-        >
-          Send
-        </button>
+        <button type="submit" class="btn btn-primary">Send</button>
       </form>
     </div>
 
-    <div class="rounded-2xl border border-black/10 bg-white/90 p-6">
-      <h2 class="text-2xl font-black tracking-tight text-slate-900">Address</h2>
+    <div class="rounded-2xl border border-slate-200/70 bg-white/90 p-6">
+      <h2 class="text-2xl font-extrabold tracking-tight text-slate-900">Address</h2>
       <p class="mt-3 text-sm leading-relaxed text-slate-700">
         {site.addressLines[0]}<br />
         {site.addressLines[1]}

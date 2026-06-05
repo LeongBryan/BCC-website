@@ -16,29 +16,18 @@ interface Props {
 const { eyebrow, title, description, image, imageAlt = "", cta = [] } = Astro.props as Props;
 ---
 
-<section class="grid gap-8 rounded-3xl border border-black/10 bg-white/90 p-6 shadow-sm md:grid-cols-[1.1fr_0.9fr] md:items-center md:p-10">
-  <div class="animate-enter">
-    {
-      eyebrow && (
-        <p class="inline-flex rounded-full bg-[var(--bcc-green)] px-3 py-1 text-xs font-black uppercase tracking-[0.12em] text-slate-900">
-          {eyebrow}
-        </p>
-      )
-    }
-    <h1 class="mt-4 text-3xl font-black leading-tight tracking-tight text-slate-900 md:text-5xl">{title}</h1>
-    <p class="mt-4 max-w-2xl text-base leading-relaxed text-slate-700 md:text-lg">{description}</p>
+<section data-reveal class="grid gap-8 rounded-3xl border border-slate-200/70 bg-white/90 p-6 shadow-sm md:grid-cols-[1.1fr_0.9fr] md:items-center md:p-10">
+  <div>
+    {eyebrow && <p class="eyebrow">{eyebrow}</p>}
+    <h1 class="mt-4 text-3xl font-extrabold leading-tight tracking-tight text-slate-900 md:text-5xl">{title}</h1>
+    <p class="mt-4 max-w-2xl text-base leading-relaxed text-slate-600 md:text-lg">{description}</p>
     {
       cta.length > 0 && (
         <div class="mt-6 flex flex-wrap gap-3">
           {cta.map((item, index) => (
             <a
               href={item.href}
-              class:list={[
-                "cursor-pointer rounded-xl border-2 px-4 py-2.5 text-sm font-black transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-slate-900 active:translate-y-px",
-                index === 0
-                  ? "border-slate-900 bg-slate-900 text-white hover:bg-[var(--bcc-yellow)] hover:text-slate-900 active:bg-slate-700 active:text-white"
-                  : "border-slate-900/35 bg-[var(--bcc-blue)] text-slate-900 hover:border-slate-900 hover:bg-slate-900 hover:text-white active:bg-slate-700 active:text-white",
-              ]}
+              class:list={["btn", index === 0 ? "btn-primary" : "btn-secondary"]}
             >
               {item.label}
             </a>
@@ -50,7 +39,7 @@ const { eyebrow, title, description, image, imageAlt = "", cta = [] } = Astro.pr
 
   {
     image && (
-      <div class="relative overflow-hidden rounded-2xl border border-black/10 bg-[var(--bcc-yellow)]/25">
+      <div class="relative overflow-hidden rounded-2xl border border-slate-200/70 bg-[var(--bcc-yellow)]/25">
         <img
           src={image}
           alt={imageAlt}
