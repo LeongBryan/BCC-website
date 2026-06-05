@@ -18,7 +18,7 @@ import gatherings from "../data/small-gatherings.json";
     cta={[{ label: "Contact us", href: "/get-in-touch.html" }]}
   />
 
-  <section aria-labelledby="care-group-intro" class="mt-8 rounded-2xl border border-slate-200/70 bg-white/90 p-6 md:p-8">
+  <section aria-labelledby="care-group-intro" class="mt-8 rounded-2xl glass p-6 md:p-8">
     <h2 data-reveal id="care-group-intro" class="text-2xl font-extrabold tracking-tight text-slate-900 md:text-3xl">Why We Gather In Smaller Groups</h2>
     <div data-reveal class="mt-4 space-y-3 text-base leading-relaxed text-slate-700">
       {
@@ -34,7 +34,7 @@ import gatherings from "../data/small-gatherings.json";
     <div data-stagger class="mt-5 grid gap-6 md:grid-cols-2">
       {
         gatherings.groups.map((group) => (
-          <article class="overflow-hidden rounded-2xl border border-slate-200/70 bg-white/90 shadow-sm">
+          <article class="overflow-hidden rounded-2xl glass">
             <img
               src={group.image}
               alt={group.imageAlt}

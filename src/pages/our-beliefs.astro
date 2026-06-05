@@ -8,7 +8,7 @@ import beliefs from "../data/beliefs.json";
   description="Statement of faith and practices at Bethesda Christian Centre."
   image="/images/logo_transparent_bg.png"
 >
-  <section data-reveal class="rounded-3xl border border-slate-200/70 bg-white/90 p-6 shadow-sm md:p-10">
+  <section data-reveal class="rounded-3xl glass p-6 md:p-10">
     <p class="eyebrow">Our Beliefs</p>
     <h1 class="mt-4 text-3xl font-extrabold tracking-tight text-slate-900 md:text-5xl">Statement Of Faith</h1>
     <p class="mt-4 max-w-3xl text-base leading-relaxed text-slate-600 md:text-lg">{beliefs.intro}</p>
@@ -23,7 +23,7 @@ import beliefs from "../data/beliefs.json";
     <ol data-stagger class="mt-5 space-y-4">
       {
         beliefs.statementOfFaith.map((item, index) => (
-          <li class="rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-sm">
+          <li class="rounded-2xl glass p-5">
             <h3 class="text-lg font-bold leading-tight text-slate-900">
               <span class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bcc-yellow)] text-sm">
                 {index + 1}
@@ -43,7 +43,7 @@ import beliefs from "../data/beliefs.json";
     <ol data-stagger class="mt-5 space-y-4">
       {
         beliefs.practices.map((item, index) => (
-          <li class="rounded-2xl border border-slate-200/70 bg-white/90 p-5 shadow-sm">
+          <li class="rounded-2xl glass p-5">
             <h3 class="text-lg font-bold leading-tight text-slate-900">
               <span class="mr-2 inline-flex h-8 w-8 items-center justify-center rounded-full bg-[var(--bcc-blue)] text-sm">
                 {index + 1}
@@ -58,7 +58,7 @@ import beliefs from "../data/beliefs.json";
     </ol>
   </section>
 
-  <section data-reveal class="mt-10 rounded-2xl border border-slate-200/70 bg-white/90 p-6">
+  <section data-reveal class="mt-10 rounded-2xl glass p-6">
     <h2 class="text-xl font-bold text-slate-900">Further Reading</h2>
     <p class="mt-3 text-sm leading-relaxed text-slate-700">
       For more detailed confessional material, see
