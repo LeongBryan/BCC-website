@@ -76,9 +76,15 @@
     @apply inline-flex items-center rounded-full bg-[var(--bcc-green)] px-3 py-1 text-xs font-semibold uppercase tracking-[0.14em] text-slate-800;
   }
 
+  /* Frosted-glass surface: the colourful background wash glows through.
+     Falls back to a more opaque white where backdrop-filter is unsupported. */
+  .glass {
+    @apply border border-white/70 bg-white/80 shadow-[0_18px_50px_-24px_rgba(2,6,23,0.3)] supports-[backdrop-filter]:bg-white/55 supports-[backdrop-filter]:backdrop-blur-xl supports-[backdrop-filter]:backdrop-saturate-150;
+  }
+
   /* Card / surface */
   .card {
-    @apply rounded-2xl border border-slate-200/70 bg-white/90 shadow-sm;
+    @apply rounded-2xl border border-white/70 bg-white/80 shadow-[0_18px_50px_-24px_rgba(2,6,23,0.3)] supports-[backdrop-filter]:bg-white/55 supports-[backdrop-filter]:backdrop-blur-xl supports-[backdrop-filter]:backdrop-saturate-150;
   }
 
   /* Buttons read as raised, tactile controls: shadow + a small lift on hover,
